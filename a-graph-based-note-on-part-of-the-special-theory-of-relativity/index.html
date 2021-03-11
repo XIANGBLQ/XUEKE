@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>A graph-based note on part of the special theory of the relativity &middot; Think Different</title>
+    <meta name="description" content="Harry Ying&amp;#x27;s blog" />
+    <link rel="shortcut icon"  href="https://lexuge.github.io/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lexuge.github.io/atom.xml">
+
+    <style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}
+</style>
+
+    
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+       
+    
+
+    <meta property="og:site_name" content="Think Different">
+      <meta name="author" content="Harry Ying" />
+      <meta property="og:title" content="A graph-based note on part of the special theory of the relativity">
+      <meta property="og:description" content="">
+      <meta property="og:url" content="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/">
+      <meta property="og:image" content="">
+
+      <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2021-02-20T00:00:00+00:00" />
+
+      <link rel="prev" href="https://lexuge.github.io/hello-world/" />
+      
+    
+
+  </head>
+  
+
+  <body>
+    <main id="main" role="main">
+
+      
+      <header role="banner">
+        <h3 style="margin-top:0;">
+          <a href="https://lexuge.github.io" title="Home">Think Different</a>
+          <br /><small>Harry Ying&#x27;s blog</small>
+        </h3>
+      </header>
+      <hr />
+      
+
+      
+<article>
+  <h1>A graph-based note on part of the special theory of the relativity</h1>
+
+  
+    <p style="font-size:90%;">Posted on <time datetime="2021-02-20T00:00:00+00:00">February 20, 2021</time></p>
+  
+
+  <blockquote>
+<p>I have been reading the special relativity part of the <em>Feynman's Lecture on Physics</em>, despite not finding quite satisfied, which may happen to be caused by Mr. Feynman's mastery and intuition on Quantum Electrodynamics but not Theory of Relativity. So after days of trials, I ended up with a self-satisfied-primer-oriented explanation here.</p>
+</blockquote>
+<h1 id="background-and-albert-einstein-s-two-famous-postulates">Background and Albert Einstein's two famous postulates</h1>
+<p>As Feynman wrote in his lecture notes, Newton's classical mechanics is invariant under Galilean transformation, which Maxwell's profound equations failed to comply with. This was quite annoying at that time cause the <script type="math/tex">c</script>, the speed of light, in the equation has got unspecified reference frame. And based on people's intuition at that time, they postulated that the <script type="math/tex">c</script> should be with respect to a media called ether, which is permeable in vacuum. A &quot;brilliant&quot; idea following that postulation is that one, by measuring the speed of light on earth, can tell the speed of earth with respect to ether. That idea was carried out in the <a href="https://en.wikipedia.org/wiki/Michelson%E2%80%93Morley_experiment">Michelson–Morley experiment</a>.</p>
+<p>However, the experiment failed, there is no interference occurred in the experiment. To explain that, Feynman said &quot;brilliant&quot; Hendrik Lorentz found doing some mathematical tricks (namely, Lorentz transformation) can solve this. However, that is quite physically counter-intuitive.</p>
+<p>Indeed, Einstein thought that the principle of relativity and light speed immutability (as shown by the experiment) should be both held. So, he had got two profound postulates which are our assumption for later discussions here. Two postulates are:</p>
+<ol>
+<li>All physics laws hold in any inertial frame without difference. (Or, all inertial frames are equivalent). The inertial frame here refers to frames undergoing no acceleration.</li>
+<li>The speed of light <script type="math/tex">c</script> is the same under any inertial reference frame.</li>
+</ol>
+<p>With these two postulates, we are interested in how would transformation from one inertial frame <script type="math/tex">S</script> to another inertial frame <script type="math/tex">S'</script> be like. And it turns out that transformation is the Lorentz transformation which we are about to derive later.</p>
+<h1 id="minkowski-space-time-diagram-and-the-lorentz-transformation">Minkowski space-time diagram and the Lorentz transformation</h1>
+<p>Einstein said graphs shall be easier to work with, therefore, we are here to use graphs. One graph, invented by Minkowski, is quite helpful to study the special theory of relativity. That graph incorporates both the time <script type="math/tex">t</script> and the position <script type="math/tex">\vec{r}</script> to describe stuffs called events (explosion, meeting, clock-ticking, etc.) at a given position in space and a give time (that is where the word space-time comes from).
+<img src="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/Minkowski-diagram.jpg" alt="Minkowski disagram" />
+Above is a Minkowski diagram. line <script type="math/tex">ct</script> is the time axis measured in meter (yes! we measure time in meter). Let us <strong>define</strong> the inertial reference frame <script type="math/tex">S</script> as the frame formed by <script type="math/tex">ct</script> and <script type="math/tex">x</script>. We also <strong>define</strong> the unit length of both time and position axis as the &quot;length on the axis&quot; used to express <script type="math/tex">c\ \text{meter}</script>. This means the unit length is indeed equivalent to length for which <script type="math/tex">t=1\text{s}</script> and <script type="math/tex">x=c\cdot 1\text{s}</script>.</p>
+<p>Line <script type="math/tex">ct'</script> is the locus of a moving particle (clock) with velocity  <script type="math/tex">\vec{u}</script> seen by observer in <script type="math/tex">S</script>. (it's just like a <script type="math/tex">x-t</script> diagram!). Since the particle doesn't undertake any acceleration with respect to a non-accelerating inertial frame <script type="math/tex">S</script>, with respect to that particle, we can also form an inertial frame called <script type="math/tex">S'</script>. Then, what we need to do is to find out what the <script type="math/tex">x'</script> looks like and what are the unit length of <script type="math/tex">S'</script>. If we happen to know both, we can express any event (point) on the plane with respect to <script type="math/tex">S'</script> using change of base in linear algebra!</p>
+<p>We shall now see that for any inertial frame, the angles its time and position axes make with positive-sloped light pulse are the same. Firstly, draw a negative-sloped light pulse locus. Let <script type="math/tex">a</script> be the unit length on <script type="math/tex">ct'</script> and <script type="math/tex">b</script>  be the unit length on <script type="math/tex">x</script>. In order for it to have speed <script type="math/tex">c</script>, we need to have <script type="math/tex">\frac{|AO|}{a}=\frac{|AB|}{b}</script>. Let <script type="math/tex">\vec{AD}\parallel \vec{OB}</script> and  <script type="math/tex">\vec{DB}\parallel \vec{AO}</script>. Likewise, we also have to have <script type="math/tex">\frac{|DO|}{a}=\frac{|DB|}{b}</script>. It follows that both  <script type="math/tex">a=b</script> and  <script type="math/tex">\angle{AOC}=\angle{BOC} </script>.</p>
+<p>Now our task is to find what  <script type="math/tex">a=b </script> is, or to find the unit length for  <script type="math/tex">ct'</script>.</p>
+<p><img src="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/lorentz-transformation.jpg" alt="Lorentz transformation derivation" /></p>
+<p>For this picture, we suppose there is a constant <script type="math/tex">\gamma</script> such that</p>
+<script type="math/tex;mode=display">\begin{pmatrix}
+u\gamma \\
+c\gamma
+\end{pmatrix} = \hat{j}</script>
+<p>where  <script type="math/tex">\hat{j}</script> is the unit vector of  <script type="math/tex">S'</script>. Similarly, we define</p>
+<script type="math/tex;mode=display">\begin{pmatrix}
+c\gamma \\
+u\gamma
+\end{pmatrix} = \hat{i}</script>
+<p>One <strong>important</strong> feature to note here is that since all laws are held in any inertial frame, with respect to <script type="math/tex">S'</script>, anything stationary in  <script type="math/tex">S</script> is undergoing a constant motion with velocity  <script type="math/tex">-\vec{u}</script>. That means applying same linear transformation to unit vectors  <script type="math/tex">\hat{j}</script> gives a linear transformation from B to A:</p>
+<script type="math/tex;mode=display">M_{BA}=\gamma\begin{pmatrix}
+1 & \frac{u}{c} \\
+\frac{u}{c} & 1
+\end{pmatrix}</script>
+<p>Likewise, because of the reciprocity (or every inertial frame is equivalent) and <script type="math/tex">S</script> moves with <script type="math/tex">-\vec{u}</script> with respect to  <script type="math/tex">S'</script>, we have:</p>
+<script type="math/tex;mode=display">M_{AB}=\gamma\begin{pmatrix}
+1 & -\frac{u}{c} \\
+-\frac{u}{c} & 1
+\end{pmatrix}</script>
+<p>We also have</p>
+<script type="math/tex;mode=display">M_{AB}M_{BA} = I</script>
+<p>Thus,</p>
+<script type="math/tex;mode=display">\gamma^2\begin{pmatrix}
+1 -\frac{u^2}{c^2} & 0 \\
+0 & 1 -\frac{u^2}{c^2}
+\end{pmatrix} = \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}</script>
+<p>Therefore, we have</p>
+<script type="math/tex;mode=display">\gamma = \frac{1}{\sqrt{1-\frac{u^2}{c^2}}}</script>
+<p>This also means the standard Lorentz transformation matrix is:</p>
+<script type="math/tex;mode=display">\Lambda=\gamma\begin{pmatrix}
+1 & -\frac{u}{c} \\
+-\frac{u}{c} & 1
+\end{pmatrix}</script>
+<p>One may be misled to write following:</p>
+<script type="math/tex;mode=display">-\gamma u \hat{i} + \gamma c \hat{j}=\begin{pmatrix}
+0 \\
+c
+\end{pmatrix}</script>
+<p>this supposes that <script type="math/tex">\begin{pmatrix}-\gamma u \ \gamma c\end{pmatrix}</script> under basis <script type="math/tex">\hat{i},\hat{j}</script> is the same as <script type="math/tex">\begin{pmatrix}0 \ c\end{pmatrix}</script> under basis of  <script type="math/tex">s</script>.
+However, it is not true. the above equation is equivalent as writing</p>
+<script type="math/tex;mode=display">\begin{pmatrix}
+c\gamma & u\gamma \\
+u\gamma & c\gamma
+\end{pmatrix}
+\begin{pmatrix}
+-u\gamma \\
+c\gamma
+\end{pmatrix}
+=\begin{pmatrix}
+0 \\
+c
+\end{pmatrix}</script>
+<p>The first matrix cannot be shown to be equivalent to matrix  <script type="math/tex">\Lambda</script>, therefore, it fails the reciprocity and should never be right at the first place.</p>
+<h1 id="relativity-of-simultaneity-space-time-interval-proper-time-and-proper-distance">Relativity of simultaneity, space-time interval, proper time, and proper distance</h1>
+<p>We all happen to know famous conclusions from Special Theory of Relativity (STR) like &quot;things are getting distorted&quot;, &quot;we can make time pass slower&quot;, etc.</p>
+<p>However, all of these are <strong>seen</strong> by one observer from one particular inertial frame. The real conclusion is that: being <em>always in one particular</em> inertial frame doesn't make you live longer (younger). Or more generally, comparing distance/time between two frames are quite meaningless actually, <strong>unless</strong> certain conditions fulfill.</p>
+<p><img src="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/relativity-of-simultaneity.jpg" alt="Relativity of simultaneity" />
+For  <script type="math/tex">S</script>, all the events on any slanted, positive-sloped line is simultaneous. However, one can easily see from the graph that this is not true for an observer in <script type="math/tex">S'</script>. Vice versa.</p>
+<p>From this point, we can see several conclusions arising.</p>
+<ol>
+<li>for the <strong>same event</strong>, time for it to happen in <script type="math/tex">S</script> is longer than that in  <script type="math/tex">S'</script>. (time dilation).</li>
+<li>for a event, the time measured in  <script type="math/tex">S</script> of its <strong>simultaneous</strong> event in  <script type="math/tex">S'</script> is shorter than the time measured of itself in  <script type="math/tex">S'</script>. (this is quite alike number 4 and is indeed the reciprocal of number 1 as seen in  <script type="math/tex">S'</script>).</li>
+<li>for the <strong>2 same events</strong>, length of it in <script type="math/tex">S</script> is longer than that in  <script type="math/tex">S'</script>. (Yes, I know this may seem to contradict length contraction, but it is true).</li>
+<li>measured at the <strong>same time</strong> in  <script type="math/tex">S</script>, the length of <strong>2 not necessarily same events</strong> is shorter than that in  <script type="math/tex">S'</script>. (length contraction).</li>
+</ol>
+<p>We analyze these one by one.</p>
+<p>To indeed get to understand these concepts (time dilation, length contraction, etc.), we have to <strong>define</strong> coordinate time, coordinate position, proper time, proper position. However, in order to define proper position/time, we have to have space-time interval first.</p>
+<p>The space-time interval  <script type="math/tex">\Delta S</script> is a quantity that is invariant under lorentz transformation.</p>
+<script type="math/tex;mode=display">\begin{aligned}
+(\Delta S)^2 &=(c\Delta t)^2-|\Delta \vec{r}|^2 \\
+(dS)^2 &=(c\cdot dt)^2-|d \vec{r}|^2
+\end{aligned}</script>
+<p>where  <script type="math/tex">\vec{r} = (x,y,z)</script> is the position vector.
+Under two dimensional space-time ( <script type="math/tex">t</script> and  <script type="math/tex">x</script>), we have equivalently:</p>
+<script type="math/tex;mode=display">\begin{aligned}
+(\Delta S)^2 &=(c\Delta t)^2-(\Delta x)^2 \\
+(dS)^2 &=(c\cdot dt)^2-(dx)^2
+\end{aligned}</script>
+<p>We also define proper time as the time measured by a clock following its movement which <strong>may not</strong> be inertial (i.e. <strong>can</strong> undergo acceleration). And this quantity should be agreed under any inertial reference frame (i.e. invariant under lorentz transformation).</p>
+<p>We now &quot;bind&quot; the clock to the moving particle. Luckily, we can have a local infinitesimal-short-lasting inertial frame in which the clock (and the particle) is at rest (i.e.  <script type="math/tex">d \vec{r}=\vec{0}</script>), and by definition, in that local rest frame,  <script type="math/tex">dt = d\tau</script>. Therefore, assuming  <script type="math/tex">(ds)^2\gt 0</script> (later we shall see that this is called time-like events),</p>
+<script type="math/tex;mode=display">\begin{aligned}
+(ds)^2 &= (c\cdot d\tau)^2 \\
+d\tau &= \frac{ds}{c}
+\end{aligned}</script>
+<p>Thus, we can see</p>
+<script type="math/tex;mode=display">\begin{aligned}
+\tau &= \int_{locus} \frac{ds}{c} \\
+&=\int^{t_2}_{t_1} \frac{\sqrt{c^2-(\frac{|d\vec{t}|}{dt})^2}}{c}\, dt \\
+&=\int^{t_2}_{t_1} \sqrt{1-(\frac{v(t)}{c})^2}\, dt \\
+&=\int^{t_2}_{t_1} \, \frac{dt}{\gamma(t)}
+\end{aligned}</script>
+<p>Likewise, given   <script type="math/tex">(ds)^2\lt 0</script> (later we shall see that this is called space-like events), we shall have proper distance differential <script type="math/tex">d\sigma</script> by</p>
+<script type="math/tex;mode=display">\begin{aligned}
+(ds)^2 &=-(d\sigma)^2 \\
+d\sigma &= \sqrt{-(ds)^2} \\
+\end{aligned}</script>
+<p>(Here we cannot write it as an integral with respect to time because time may not be a parameter to this as the locus is always have slope smaller than 1).</p>
+<p>Now we define a few more terms.</p>
+<p>Coordinate time for event <script type="math/tex">A</script> under one inertial frame is simply the time component of that event under the frame.</p>
+<p>Coordinate position is likewise the position component under the frame for one particular event.</p>
+<p>Finally, we can analyze the conclusions.
+<img src="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/conclusions-of-tos.jpg" alt="Conclusions of relativity of simultaneity" /></p>
+<p>As shown above, coordinate time is reason for time dilation (<script type="math/tex">c\gamma t\gt ct</script>). However, the same event <script type="math/tex">A</script> measured at the same place under <script type="math/tex">S</script> is <script type="math/tex">\frac{ct}{\gamma}\lt ct</script> (time &quot;contraction&quot;).</p>
+<p>Same argument can be employed for the length. However, there is a very interesting phenomenon.</p>
+<p><img src="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/head-and-tail.jpg" alt="Head and tail" /></p>
+<p>In the above picture, one in <script type="math/tex">S</script> can see both event (head and tail) at the same time. However, it is not the case for ones in <script type="math/tex">S'</script>. They can only see either head or tail.</p>
+<p>Do head and tail exist at the same time? It depends on your reference frame. And indeed, above example illustrates how <strong>absurd</strong> it is to compare phenomenons between frames together. One shall <strong>not</strong> do that unless things don't change, etc.</p>
+<p>In addition to that, it is also pretty easy to see comparison between proper events makes sense if and only if both locuses start and end at the same event. It also follows that at least one of these two locus undergoes acceleration if the proper time differ. One shall be able to further prove that the one undergoing acceleration has less proper time.</p>
+<p>Proof is like this. Take the inertial frame in which the inertial locus is in as our reference frame for the rest of the proof. Since another locus is accelerating, it has some velocity with respect to our frame. Therefore the integrand <script type="math/tex">\sqrt{1-(\frac{v(t)}{c})^2}\lt 0</script> for some time intervals, resulting in a smaller area under the curve and hence proper time.</p>
+<h1 id="the-twin-paradox">The twin paradox</h1>
+<p>The following video explained it intuitively.</p>
+<div >
+    <iframe
+        src="https://www.youtube.com/embed/0iJZ_QGMLD0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>
+<p>On the other hand, proper time is shorter for accelerated clock is also a direct argument for this paradox. Brother on the ship experienced less time, but he saw brother on earth experiencing longer time (see picture with &quot;inverse&quot; proper time function above). Those lines are continuously sweeping out the time axis of brother-on-earth frame.</p>
+<p>Another thing to note is that it is mathematically impossible to have a sharp turnaround because in that way <script type="math/tex">\vec{r}(t)</script> is not differentiable, giving no velocity at the turning point. Even if it is possible, you will see your brother on earth age within just a snap.</p>
+<p>You can be younger under acceleration.</p>
+<h1 id="unsolved-bits">Unsolved bits</h1>
+<p>There are lots to learn in STR, namely, Relativistic dopler's effect, energy-mass equivalence, etc. I didn't cover these, but hopefully with basic tools here and infinite amount of mathematical talent, you can derive out all by yourself.</p>
+<p>I am wondering if there is a physical explanation that relates relativity of simultaneity and the fact that information travels at the speed of light.</p>
+<p>I didn't use a lot of mathematics here and drew a lot of graphs, because I came to understand: to learn physics well, you should see phenomenons without using heavy equations.</p>
+
+</article>
+
+
+      
+      <footer role="contentinfo">
+        <hr />
+        
+        <nav style="margin-bottom:1rem;" role="navigation">
+          
+            <a href="https://lexuge.github.io/about">About</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://lexuge.github.io/atom.xml">RSS</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://github.com/LEXUGE">GitHub</a>
+            
+          
+        </nav>
+        
+        
+        <small>
+	  “If you want to live a happy life, tie it to a goal, not to people or things.” - Albert Einstein<br/>
+          Built with <a href="https://www.getzola.org/">Zola</a> by Harry Ying.<br/>
+	  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />
+        </small>
+        
+      </footer>
+      
+
+    </main>
+    
+    
+  </body>
+</html>
+

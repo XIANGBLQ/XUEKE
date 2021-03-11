@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>More rigorous deduction and proof on Young&#x27;s double-slit experiment &middot; Think Different</title>
+    <meta name="description" content="Harry Ying&amp;#x27;s blog" />
+    <link rel="shortcut icon"  href="https://lexuge.github.io/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lexuge.github.io/atom.xml">
+
+    <style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}
+</style>
+
+    
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+       
+    
+
+    <meta property="og:site_name" content="Think Different">
+      <meta name="author" content="Harry Ying" />
+      <meta property="og:title" content="More rigorous deduction and proof on Young&#x27;s double-slit experiment">
+      <meta property="og:description" content="">
+      <meta property="og:url" content="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/">
+      <meta property="og:image" content="">
+
+      <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2020-02-09T00:00:00+00:00" />
+
+      <link rel="prev" href="https://lexuge.github.io/behind-the-2019-ncov-who-sentenced-country-to-death/" />
+      <link rel="next" href="https://lexuge.github.io/hello-world/" />
+    
+
+  </head>
+  
+
+  <body>
+    <main id="main" role="main">
+
+      
+      <header role="banner">
+        <h3 style="margin-top:0;">
+          <a href="https://lexuge.github.io" title="Home">Think Different</a>
+          <br /><small>Harry Ying&#x27;s blog</small>
+        </h3>
+      </header>
+      <hr />
+      
+
+      
+<article>
+  <h1>More rigorous deduction and proof on Young&#x27;s double-slit experiment</h1>
+
+  
+    <p style="font-size:90%;">Posted on <time datetime="2020-02-09T00:00:00+00:00">February 09, 2020</time></p>
+  
+
+  <blockquote>
+<p>Recently, I have been studying physical optics. I found the formulas that are given in the textbook in the section of profound Young's double-slit experiment are quite &quot;approximate&quot;. Since I always have the belief that Physics should be progressed in a mathematical manner with rigorous deductions and proofs, I decided to deduct some of the parts by myself and also try to prove the conclusions that are given in the textbook without proofs.</p>
+</blockquote>
+<h1 id="what-are-we-gonna-to-do">What are we gonna to do?</h1>
+<p>Before our journey starts, we should first decide what to do. In this post, I will show you how to calculate the positions of any fringes on the viewing screen. Also I will show how the light intensity varies through different bright or black fringes on the screen (of course with proof!). And through the function that we acquired above, we will graph it.</p>
+<h1 id="prerequisite">Prerequisite</h1>
+<p>We need to first define two sets</p>
+<script type="math/tex;mode=display">\begin{aligned}
+     \Alpha &= \{2k|k\in{}\Z\}\\
+     \Beta  &= \{2k+1|k\in{}\Z\}
+\end{aligned}</script>
+<p>Obviously, <script type="math/tex">\Alpha</script> is the set of all the even numbers while <script type="math/tex">\Beta</script> is the set of all the odd numbers. We also need to define some variables that have their own meanings.</p>
+<p><img src="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/double-slit-demo.png" alt="" /></p>
+<p>Above is a image that illustrated the experiment.</p>
+<p>We hereby define the <script type="math/tex">d</script> as the length between two slits and <script type="math/tex">\ell</script> as the length between the slits and viewing screen. Also, the <script type="math/tex">\lambda</script> is for the wavelength of the light and <script type="math/tex">x</script> is the postion of the intersection of the two waves on the screen (with respect to the middle point of <script type="math/tex">d</script>, upper side is for positive). The upper one is <script type="math/tex">r_{2}</script> and the down one is <script type="math/tex">r_{1}</script>. Assume <script type="math/tex">\ell\gg{}d\gg{}\lambda{}</script>. Also we are not talking about <script type="math/tex">x\to{}\pm{}\infty{}</script> here, causing our approximation based on this assumption.</p>
+<h1 id="general-function-and-qualitative-analysis-on-it">General function and qualitative analysis on it.</h1>
+<p>First we need to investigate into the general function <script type="math/tex">f</script> that could describe the wave at any given time <script type="math/tex">t</script> with given <script type="math/tex">x</script> on the screen.</p>
+<p>For a circular wave <script type="math/tex">\psi</script>, the intensity <script type="math/tex">I\propto{}A^{2}</script>. And since <script type="math/tex">I=\frac{P}{2\pi{}r}</script>, <script type="math/tex">I\propto{}\frac{1}{r}</script>. So from two above, we could see <script type="math/tex">A\propto{}\frac{1}{\sqrt{r}}</script>.</p>
+<p>Here, in order to make it simple, for the sake of the qualitative analysis, we set the coefficient to one. From the knowledge that we acquire, at any given point, the wave would be the algebraic sum of the waves. The two waves are, in this scenario:</p>
+<script type="math/tex;mode=display">\begin{aligned}
+    \psi_{1}(r_{1}) &= \frac{A}{\sqrt{r_{1}}}\cos{(\frac{2\pi}{\lambda}r_{1}-vt)}\\
+    \psi_{2}(r_{2}) &= \frac{A}{\sqrt{r_{2}}}\cos{(\frac{2\pi}{\lambda}r_{2}-vt)}
+\end{aligned}</script>
+<p>Thus, the total wave <script type="math/tex">\psi</script> would be:</p>
+<script type="math/tex;mode=display">\psi(r_{1},r_{2}) = \frac{A}{\sqrt{r_{1}}}\cos{(\frac{2\pi}{\lambda}r_{1}-vt)}+\frac{A}{\sqrt{r_{2}}}\cos{(\frac{2\pi}{\lambda}r_{2}-vt)}</script>
+<p>Here goes the tricky part. Since <script type="math/tex">\cos{x}</script> varies in <script type="math/tex">[-1,1]</script>, the amplitude of <script type="math/tex">\psi</script> would also vary in <script type="math/tex">[A(|\frac{1}{\sqrt{r_{2}}}-\frac{1}{\sqrt{r_{1}}}|),A(\frac{1}{\sqrt{r_{1}}}+\frac{1}{\sqrt{r_{2}}})]</script>.</p>
+<p>We here investigate the range of the amplitude of <script type="math/tex">\psi</script> because the light intensity would be proportional to the <script type="math/tex">A^{2}</script>. Thus, if we could determine the condition of being black or bright, then we could work out the positions of fringes.</p>
+<p>In order to get <script type="math/tex">A(|\frac{1}{\sqrt{r_{2}}}-\frac{1}{\sqrt{r_{1}}}|)</script>, there must be <script type="math/tex">\cos{(\frac{2\pi}{\lambda}r_{1}-vt)}=-\cos{(\frac{2\pi}{\lambda}r_{2}-vt)}</script>.</p>
+<p>And for the <script type="math/tex">A(\frac{1}{\sqrt{r_{1}}}+\frac{1}{\sqrt{r_{2}}})</script>, two waves must be in phase.
+Thus for the lowest amplitude,</p>
+<script type="math/tex;mode=display">\begin{aligned}
+     (\frac{2\pi}{\lambda}r_{1}-vt)-(\frac{2\pi}{\lambda}r_{2}-vt)&=k\pi\\
+     \frac{2\pi}{\lambda}(r_{1}-r_{2})&=k\pi\\
+     r_{1}-r_{2}&=\frac{k\lambda{}}{2}
+\end{aligned}</script>
+<p>where <script type="math/tex">k\in{}\Beta{}</script> (<script type="math/tex">k\gt0</script> for upper black fringes).</p>
+<p>On the other hand, for the highest amplitude, we must fulfill <script type="math/tex">r_{1}-r_{2}=\frac{k\lambda{}}{2}</script> where <script type="math/tex">k\in{}\Alpha</script> (<script type="math/tex">k\leq{}0</script> for bright fringes in upper section or in perfect middle).</p>
+<p>All in all, we could use <a name="tag-1"></a></p>
+<script type="math/tex;mode=display">\tag{1}r_{1}-r_{2}=\frac{k\lambda{}}{2}</script>
+<p>where <script type="math/tex">k\in{}\Z</script> to determine the relation between <script type="math/tex">r_{1}</script> and <script type="math/tex">r_{2}</script> when they form either bright or black fringes (depends on whether <script type="math/tex">k\in{}\Alpha</script> or <script type="math/tex">k\in\Beta</script>).</p>
+<h1 id="deduction-of-x-given-the-number-of-fringes">Deduction of <script type="math/tex">x</script> given the number of fringes.</h1>
+<p>From <a href="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/#tag-1">first equation</a> that we deduced above, we now use it to work out the <script type="math/tex">x</script> with given <script type="math/tex">k</script>. First we could see that,</p>
+<script type="math/tex;mode=display">\begin{aligned}
+   r_{1}&=\sqrt{(x+\frac{d}{2})^{2}+\ell^{2}}\\
+   r_{2}&=\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}
+\end{aligned}</script>
+<p>Substitute them into the equation,</p>
+<script type="math/tex;mode=display">\begin{aligned}
+    \sqrt{(x+\frac{d}{2})^{2}+\ell^{2}}-\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}&=\frac{k\lambda{}}{2}\\
+    \sqrt{(x+\frac{d}{2})^{2}+\ell^{2}}&=\frac{k\lambda{}}{2}+\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}\\
+    (x+\frac{d}{2})^{2}+\ell^{2}&=\frac{k^{2}\lambda^{2}}{4}+k\lambda{}\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}+(x-\frac{d}{2})^{2}+\ell^{2}\\
+    2xd-\frac{k^{2}\lambda^{2}}{4}&=k\lambda{}\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}\\
+    (2xd-\frac{k^{2}\lambda^{2}}{4})^{2}&=k\lambda{}(x^{2}-xd+\frac{d^{2}}{4}+\ell^{2})\\ 4x^{2}d^{2}-xdk^{2}\lambda^{2}+\frac{k^{4}\lambda^{4}}{16}&=k^{2}\lambda^{2}x^{2}-k^{2}\lambda^{2}xd+\frac{k^{2}\lambda^{2}d^{2}}{4}+k^{2}\lambda^{2}\ell^{2}\\
+    (4d^{2}-k^{2}\lambda^{2})x^{2}&=\frac{4k^{2}\lambda^{2}d^{2}+16k^{2}\lambda^{2}\ell^{2}-k^{4}\lambda^{4}}{16}\\
+    x^{2}&=\frac{4k^{2}\lambda^{2}d^{2}+16k^{2}\lambda^{2}\ell^{2}-k^{4}\lambda^{4}}{16(4d^{2}-k^{2}\lambda^{2})}\\
+    x&=\pm\sqrt{\frac{k^{2}\lambda^{2}}{16}}\sqrt{\frac{4d^{2}+16\ell^{2}-k^{2}\lambda^{2}}{4d^{2}-k^{2}\lambda^{2}}}\\
+    x&=\pm\frac{k\lambda}{4}\sqrt{\frac{4d^{2}+16\ell^{2}-k^{2}\lambda^{2}}{4d^{2}-k^{2}\lambda^{2}}}
+\end{aligned}</script>
+<p>Since the <script type="math/tex">x</script> is too complicated, we need to do one approximation to that. Since <script type="math/tex">\ell{}\gg{}d\gg{}\lambda{}</script>,</p>
+<script type="math/tex;mode=display">\begin{aligned}
+    x&\approx\pm\frac{k\lambda}{4}\sqrt{\frac{16\ell^{2}}{4d^{2}}}\\
+    &=\pm\frac{k\lambda{}\ell}{2d}
+\end{aligned}</script>
+<p>Since <script type="math/tex">x=-\frac{k\lambda{}\ell}{2d}</script> doesn't fulfill the original equation, the final solution to that would be: <a name="tag-2"></a></p>
+<script type="math/tex;mode=display">\tag{2}x=\frac{k\lambda{}\ell}{2d}</script>
+<p>Equation above would be quite useful for you to determine the position of the fringes.</p>
+<h1 id="light-intensity-function">Light intensity function</h1>
+<p>Based on what we have discussed in first section, the function of light intensity <script type="math/tex">I</script> is</p>
+<script type="math/tex;mode=display">I(k)=\epsilon^{2}A^{2}(\frac{1}{\sqrt{r_{1}}}+(-1)^{k}\frac{1}{\sqrt{r_{2}}})^{2}</script>
+<p>where <script type="math/tex">\epsilon</script> is the coefficient of proportion. (Here we don't care about the relative order of <script type="math/tex">r_{1}</script> and <script type="math/tex">r_{2}</script> since they are ultimately squared).</p>
+<p>Based on the <script type="math/tex">x</script> that we acquired <a href="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/#tag-2">above</a>, we could work out <script type="math/tex">r_{1}</script> and <script type="math/tex">r_{2}</script>.</p>
+<script type="math/tex;mode=display">\begin{aligned}
+    r_{1}&=\sqrt{\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}}\\
+    r_{2}&=\sqrt{\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}}
+\end{aligned}</script>
+<p>Thus, <a name="tag-3"></a></p>
+<script type="math/tex;mode=display">\tag{3}I(k)=(\epsilon A\frac{1}{[\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}}+(-1)^{k}\frac{1}{[\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}})^{2}</script>
+<p>where <script type="math/tex">k\in{}\Z</script>.</p>
+<p>We now graph separately the function when <script type="math/tex">k\in{}\Beta</script> and <script type="math/tex">k\in{}\Alpha</script> (<strong>Following is not drawn to scale, only represents trend</strong>).</p>
+<p><img src="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/double-slit.png" alt="" /></p>
+<p>On the graph, the green graph is (<script type="math/tex">k\in{}\Alpha</script>) and the purple one is (<script type="math/tex">k\in{}\Beta{}</script>) As you can see, as the <script type="math/tex">k</script> goes along the either side of <script type="math/tex">x</script> axis, the
+value of green one will go smaller.</p>
+<h2 id="proof">Proof</h2>
+<p>Here we will prove under <strong>approximation</strong>, the light intensity of bright fringes will go smaller and the intensity of black ones will stay <script type="math/tex">0</script>. It's actually not precise but I can only find the proof to this extend. I have been finding the proof without compromising the beauty of mathematics for almost two days. But it turned out to be nothing based on my ability.</p>
+<p>So how to prove?</p>
+<p>Since we are doing qualitative analysis, we may first simplify the <a href="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/#tag-3">third equation</a>. It could be</p>
+<script type="math/tex;mode=display">I(k)=(\frac{1}{[\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}}+(-1)^{k}\frac{1}{[\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}})^{2}</script>
+<p>Now focus on</p>
+<script type="math/tex;mode=display">\frac{(k\lambda{}\ell\pm{}d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}</script>
+<p>We have</p>
+<script type="math/tex;mode=display">\begin{aligned}
+   r_{1}=&\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}\\
+   =&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}k\lambda{}\ell+d^{4}+\ell^{2}}{4d^{2}}\\
+   =&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(k\lambda{}\ell{}+d^{2}+2\ell^{2})}{4d^{2}}\\
+   =&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}[2\ell{}(k\lambda{}+\ell)+d^{2}]}{4d^{2}}\\
+   \approx{}&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2}+d^{2})}{4d^{2}}\\
+   \approx{}&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2})}{4d^{2}}\\
+   ={}&\frac{k^{2}\lambda{}^{2}\ell^{2}+4d^{2}\ell{}^{2}}{4d^{2}}
+\end{aligned}</script>
+<p>Similarly,</p>
+<script type="math/tex;mode=display">\begin{aligned}
+   r_{2}=&\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}\\
+   =&\frac{k^{2}\lambda{}^{2}\ell^{2}-2d^{2}k\lambda{}\ell+d^{4}+\ell^{2}}{4d^{2}}\\
+   =&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(-k\lambda{}\ell{}+d^{2}+2\ell^{2})}{4d^{2}}\\
+   =&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}[2\ell{}(-k\lambda{}+\ell)+d^{2}]}{4d^{2}}\\
+   \approx{}&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2}+d^{2})}{4d^{2}}\\
+   \approx{}&\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2})}{4d^{2}}\\
+   ={}&\frac{k^{2}\lambda{}^{2}\ell^{2}+4d^{2}\ell{}^{2}}{4d^{2}}
+\end{aligned}</script>
+<p>Under this scenario, <script type="math/tex">r_{1}=r_{2}</script>, thus it's obvious that the black fringes are <script type="math/tex">0</script> intensified.</p>
+<p>And for the bright fringes,</p>
+<script type="math/tex;mode=display">\frac{d}{dk}I=-\frac{4 \, \left(\frac{1}{4}\right)^{\frac{3}{4}} k l^{2} m^{2}}{d^{2} \left(\frac{k^{2} l^{2} m^{2} + 4 \, d^{2} l^{2}}{d^{2}}\right)^{\frac{5}{4}}}</script>
+<p>For <script type="math/tex">k\lt0</script>, <script type="math/tex">\frac{d}{dk}I\gt0</script>, while <script type="math/tex">k\gt0</script>, <script type="math/tex">\frac{d}{dk}I\lt0</script> and <script type="math/tex">k=0</script>, <script type="math/tex">\frac{d}{dk}I=0</script>, by which we can say that the light is at its peak when <script type="math/tex">k=0</script>.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I found out its just crazy to apply math to physics. I am too tired because of this. If you like it, please buy me a cup of coffee.</p>
+
+</article>
+
+
+      
+      <footer role="contentinfo">
+        <hr />
+        
+        <nav style="margin-bottom:1rem;" role="navigation">
+          
+            <a href="https://lexuge.github.io/about">About</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://lexuge.github.io/atom.xml">RSS</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://github.com/LEXUGE">GitHub</a>
+            
+          
+        </nav>
+        
+        
+        <small>
+	  “If you want to live a happy life, tie it to a goal, not to people or things.” - Albert Einstein<br/>
+          Built with <a href="https://www.getzola.org/">Zola</a> by Harry Ying.<br/>
+	  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />
+        </small>
+        
+      </footer>
+      
+
+    </main>
+    
+    
+  </body>
+</html>
+

@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Think Different</title>
+	<subtitle>Harry Ying&#x27;s blog</subtitle>
+	<link href="https://lexuge.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://lexuge.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-02-20T00:00:00+00:00</updated>
+	<id>https://lexuge.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>A graph-based note on part of the special theory of the relativity</title>
+		<published>2021-02-20T00:00:00+00:00</published>
+		<updated>2021-02-20T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/" type="text/html"/>
+		<id>https://lexuge.github.io/a-graph-based-note-on-part-of-the-special-theory-of-relativity/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;I have been reading the special relativity part of the &lt;em&gt;Feynman&#x27;s Lecture on Physics&lt;&#x2F;em&gt;, despite not finding quite satisfied, which may happen to be caused by Mr. Feynman&#x27;s mastery and intuition on Quantum Electrodynamics but not Theory of Relativity. So after days of trials, I ended up with a self-satisfied-primer-oriented explanation here.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;background-and-albert-einstein-s-two-famous-postulates&quot;&gt;Background and Albert Einstein&#x27;s two famous postulates&lt;&#x2F;h1&gt;
+&lt;p&gt;As Feynman wrote in his lecture notes, Newton&#x27;s classical mechanics is invariant under Galilean transformation, which Maxwell&#x27;s profound equations failed to comply with. This was quite annoying at that time cause the &lt;script type=&quot;math&#x2F;tex&quot;&gt;c&lt;&#x2F;script&gt;, the speed of light, in the equation has got unspecified reference frame. And based on people&#x27;s intuition at that time, they postulated that the &lt;script type=&quot;math&#x2F;tex&quot;&gt;c&lt;&#x2F;script&gt; should be with respect to a media called ether, which is permeable in vacuum. A &amp;quot;brilliant&amp;quot; idea following that postulation is that one, by measuring the speed of light on earth, can tell the speed of earth with respect to ether. That idea was carried out in the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Michelson%E2%80%93Morley_experiment&quot;&gt;Michelson–Morley experiment&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;However, the experiment failed, there is no interference occurred in the experiment. To explain that, Feynman said &amp;quot;brilliant&amp;quot; Hendrik Lorentz found doing some mathematical tricks (namely, Lorentz transformation) can solve this. However, that is quite physically counter-intuitive.&lt;&#x2F;p&gt;
+&lt;p&gt;Indeed, Einstein thought that the principle of relativity and light speed immutability (as shown by the experiment) should be both held. So, he had got two profound postulates which are our assumption for later discussions here. Two postulates are:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;All physics laws hold in any inertial frame without difference. (Or, all inertial frames are equivalent). The inertial frame here refers to frames undergoing no acceleration.&lt;&#x2F;li&gt;
+&lt;li&gt;The speed of light &lt;script type=&quot;math&#x2F;tex&quot;&gt;c&lt;&#x2F;script&gt; is the same under any inertial reference frame.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;With these two postulates, we are interested in how would transformation from one inertial frame &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; to another inertial frame &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt; be like. And it turns out that transformation is the Lorentz transformation which we are about to derive later.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;minkowski-space-time-diagram-and-the-lorentz-transformation&quot;&gt;Minkowski space-time diagram and the Lorentz transformation&lt;&#x2F;h1&gt;
+&lt;p&gt;Einstein said graphs shall be easier to work with, therefore, we are here to use graphs. One graph, invented by Minkowski, is quite helpful to study the special theory of relativity. That graph incorporates both the time &lt;script type=&quot;math&#x2F;tex&quot;&gt;t&lt;&#x2F;script&gt; and the position &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{r}&lt;&#x2F;script&gt; to describe stuffs called events (explosion, meeting, clock-ticking, etc.) at a given position in space and a give time (that is where the word space-time comes from).
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;a-graph-based-note-on-part-of-the-special-theory-of-relativity&#x2F;Minkowski-diagram.jpg&quot; alt=&quot;Minkowski disagram&quot; &#x2F;&gt;
+Above is a Minkowski diagram. line &lt;script type=&quot;math&#x2F;tex&quot;&gt;ct&lt;&#x2F;script&gt; is the time axis measured in meter (yes! we measure time in meter). Let us &lt;strong&gt;define&lt;&#x2F;strong&gt; the inertial reference frame &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; as the frame formed by &lt;script type=&quot;math&#x2F;tex&quot;&gt;ct&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt;. We also &lt;strong&gt;define&lt;&#x2F;strong&gt; the unit length of both time and position axis as the &amp;quot;length on the axis&amp;quot; used to express &lt;script type=&quot;math&#x2F;tex&quot;&gt;c\ \text{meter}&lt;&#x2F;script&gt;. This means the unit length is indeed equivalent to length for which &lt;script type=&quot;math&#x2F;tex&quot;&gt;t=1\text{s}&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;x=c\cdot 1\text{s}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Line &lt;script type=&quot;math&#x2F;tex&quot;&gt;ct&#x27;&lt;&#x2F;script&gt; is the locus of a moving particle (clock) with velocity  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{u}&lt;&#x2F;script&gt; seen by observer in &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt;. (it&#x27;s just like a &lt;script type=&quot;math&#x2F;tex&quot;&gt;x-t&lt;&#x2F;script&gt; diagram!). Since the particle doesn&#x27;t undertake any acceleration with respect to a non-accelerating inertial frame &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt;, with respect to that particle, we can also form an inertial frame called &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. Then, what we need to do is to find out what the &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&#x27;&lt;&#x2F;script&gt; looks like and what are the unit length of &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. If we happen to know both, we can express any event (point) on the plane with respect to &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt; using change of base in linear algebra!&lt;&#x2F;p&gt;
+&lt;p&gt;We shall now see that for any inertial frame, the angles its time and position axes make with positive-sloped light pulse are the same. Firstly, draw a negative-sloped light pulse locus. Let &lt;script type=&quot;math&#x2F;tex&quot;&gt;a&lt;&#x2F;script&gt; be the unit length on &lt;script type=&quot;math&#x2F;tex&quot;&gt;ct&#x27;&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;b&lt;&#x2F;script&gt;  be the unit length on &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt;. In order for it to have speed &lt;script type=&quot;math&#x2F;tex&quot;&gt;c&lt;&#x2F;script&gt;, we need to have &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{|AO|}{a}=\frac{|AB|}{b}&lt;&#x2F;script&gt;. Let &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{AD}\parallel \vec{OB}&lt;&#x2F;script&gt; and  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{DB}\parallel \vec{AO}&lt;&#x2F;script&gt;. Likewise, we also have to have &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{|DO|}{a}=\frac{|DB|}{b}&lt;&#x2F;script&gt;. It follows that both  &lt;script type=&quot;math&#x2F;tex&quot;&gt;a=b&lt;&#x2F;script&gt; and  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\angle{AOC}=\angle{BOC} &lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Now our task is to find what  &lt;script type=&quot;math&#x2F;tex&quot;&gt;a=b &lt;&#x2F;script&gt; is, or to find the unit length for  &lt;script type=&quot;math&#x2F;tex&quot;&gt;ct&#x27;&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;a-graph-based-note-on-part-of-the-special-theory-of-relativity&#x2F;lorentz-transformation.jpg&quot; alt=&quot;Lorentz transformation derivation&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;For this picture, we suppose there is a constant &lt;script type=&quot;math&#x2F;tex&quot;&gt;\gamma&lt;&#x2F;script&gt; such that&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{pmatrix}
+u\gamma \\
+c\gamma
+\end{pmatrix} = \hat{j}&lt;&#x2F;script&gt;
+&lt;p&gt;where  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\hat{j}&lt;&#x2F;script&gt; is the unit vector of  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. Similarly, we define&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{pmatrix}
+c\gamma \\
+u\gamma
+\end{pmatrix} = \hat{i}&lt;&#x2F;script&gt;
+&lt;p&gt;One &lt;strong&gt;important&lt;&#x2F;strong&gt; feature to note here is that since all laws are held in any inertial frame, with respect to &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;, anything stationary in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; is undergoing a constant motion with velocity  &lt;script type=&quot;math&#x2F;tex&quot;&gt;-\vec{u}&lt;&#x2F;script&gt;. That means applying same linear transformation to unit vectors  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\hat{j}&lt;&#x2F;script&gt; gives a linear transformation from B to A:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;M_{BA}=\gamma\begin{pmatrix}
+1 &amp; \frac{u}{c} \\
+\frac{u}{c} &amp; 1
+\end{pmatrix}&lt;&#x2F;script&gt;
+&lt;p&gt;Likewise, because of the reciprocity (or every inertial frame is equivalent) and &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; moves with &lt;script type=&quot;math&#x2F;tex&quot;&gt;-\vec{u}&lt;&#x2F;script&gt; with respect to  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;, we have:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;M_{AB}=\gamma\begin{pmatrix}
+1 &amp; -\frac{u}{c} \\
+-\frac{u}{c} &amp; 1
+\end{pmatrix}&lt;&#x2F;script&gt;
+&lt;p&gt;We also have&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;M_{AB}M_{BA} = I&lt;&#x2F;script&gt;
+&lt;p&gt;Thus,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\gamma^2\begin{pmatrix}
+1 -\frac{u^2}{c^2} &amp; 0 \\
+0 &amp; 1 -\frac{u^2}{c^2}
+\end{pmatrix} = \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}&lt;&#x2F;script&gt;
+&lt;p&gt;Therefore, we have&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\gamma = \frac{1}{\sqrt{1-\frac{u^2}{c^2}}}&lt;&#x2F;script&gt;
+&lt;p&gt;This also means the standard Lorentz transformation matrix is:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\Lambda=\gamma\begin{pmatrix}
+1 &amp; -\frac{u}{c} \\
+-\frac{u}{c} &amp; 1
+\end{pmatrix}&lt;&#x2F;script&gt;
+&lt;p&gt;One may be misled to write following:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;-\gamma u \hat{i} + \gamma c \hat{j}=\begin{pmatrix}
+0 \\
+c
+\end{pmatrix}&lt;&#x2F;script&gt;
+&lt;p&gt;this supposes that &lt;script type=&quot;math&#x2F;tex&quot;&gt;\begin{pmatrix}-\gamma u \ \gamma c\end{pmatrix}&lt;&#x2F;script&gt; under basis &lt;script type=&quot;math&#x2F;tex&quot;&gt;\hat{i},\hat{j}&lt;&#x2F;script&gt; is the same as &lt;script type=&quot;math&#x2F;tex&quot;&gt;\begin{pmatrix}0 \ c\end{pmatrix}&lt;&#x2F;script&gt; under basis of  &lt;script type=&quot;math&#x2F;tex&quot;&gt;s&lt;&#x2F;script&gt;.
+However, it is not true. the above equation is equivalent as writing&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{pmatrix}
+c\gamma &amp; u\gamma \\
+u\gamma &amp; c\gamma
+\end{pmatrix}
+\begin{pmatrix}
+-u\gamma \\
+c\gamma
+\end{pmatrix}
+=\begin{pmatrix}
+0 \\
+c
+\end{pmatrix}&lt;&#x2F;script&gt;
+&lt;p&gt;The first matrix cannot be shown to be equivalent to matrix  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Lambda&lt;&#x2F;script&gt;, therefore, it fails the reciprocity and should never be right at the first place.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;relativity-of-simultaneity-space-time-interval-proper-time-and-proper-distance&quot;&gt;Relativity of simultaneity, space-time interval, proper time, and proper distance&lt;&#x2F;h1&gt;
+&lt;p&gt;We all happen to know famous conclusions from Special Theory of Relativity (STR) like &amp;quot;things are getting distorted&amp;quot;, &amp;quot;we can make time pass slower&amp;quot;, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;However, all of these are &lt;strong&gt;seen&lt;&#x2F;strong&gt; by one observer from one particular inertial frame. The real conclusion is that: being &lt;em&gt;always in one particular&lt;&#x2F;em&gt; inertial frame doesn&#x27;t make you live longer (younger). Or more generally, comparing distance&#x2F;time between two frames are quite meaningless actually, &lt;strong&gt;unless&lt;&#x2F;strong&gt; certain conditions fulfill.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;a-graph-based-note-on-part-of-the-special-theory-of-relativity&#x2F;relativity-of-simultaneity.jpg&quot; alt=&quot;Relativity of simultaneity&quot; &#x2F;&gt;
+For  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt;, all the events on any slanted, positive-sloped line is simultaneous. However, one can easily see from the graph that this is not true for an observer in &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. Vice versa.&lt;&#x2F;p&gt;
+&lt;p&gt;From this point, we can see several conclusions arising.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;for the &lt;strong&gt;same event&lt;&#x2F;strong&gt;, time for it to happen in &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; is longer than that in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. (time dilation).&lt;&#x2F;li&gt;
+&lt;li&gt;for a event, the time measured in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; of its &lt;strong&gt;simultaneous&lt;&#x2F;strong&gt; event in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt; is shorter than the time measured of itself in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. (this is quite alike number 4 and is indeed the reciprocal of number 1 as seen in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;for the &lt;strong&gt;2 same events&lt;&#x2F;strong&gt;, length of it in &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; is longer than that in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. (Yes, I know this may seem to contradict length contraction, but it is true).&lt;&#x2F;li&gt;
+&lt;li&gt;measured at the &lt;strong&gt;same time&lt;&#x2F;strong&gt; in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt;, the length of &lt;strong&gt;2 not necessarily same events&lt;&#x2F;strong&gt; is shorter than that in  &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. (length contraction).&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;We analyze these one by one.&lt;&#x2F;p&gt;
+&lt;p&gt;To indeed get to understand these concepts (time dilation, length contraction, etc.), we have to &lt;strong&gt;define&lt;&#x2F;strong&gt; coordinate time, coordinate position, proper time, proper position. However, in order to define proper position&#x2F;time, we have to have space-time interval first.&lt;&#x2F;p&gt;
+&lt;p&gt;The space-time interval  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Delta S&lt;&#x2F;script&gt; is a quantity that is invariant under lorentz transformation.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+(\Delta S)^2 &amp;=(c\Delta t)^2-|\Delta \vec{r}|^2 \\
+(dS)^2 &amp;=(c\cdot dt)^2-|d \vec{r}|^2
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;where  &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{r} = (x,y,z)&lt;&#x2F;script&gt; is the position vector.
+Under two dimensional space-time ( &lt;script type=&quot;math&#x2F;tex&quot;&gt;t&lt;&#x2F;script&gt; and  &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt;), we have equivalently:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+(\Delta S)^2 &amp;=(c\Delta t)^2-(\Delta x)^2 \\
+(dS)^2 &amp;=(c\cdot dt)^2-(dx)^2
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;We also define proper time as the time measured by a clock following its movement which &lt;strong&gt;may not&lt;&#x2F;strong&gt; be inertial (i.e. &lt;strong&gt;can&lt;&#x2F;strong&gt; undergo acceleration). And this quantity should be agreed under any inertial reference frame (i.e. invariant under lorentz transformation).&lt;&#x2F;p&gt;
+&lt;p&gt;We now &amp;quot;bind&amp;quot; the clock to the moving particle. Luckily, we can have a local infinitesimal-short-lasting inertial frame in which the clock (and the particle) is at rest (i.e.  &lt;script type=&quot;math&#x2F;tex&quot;&gt;d \vec{r}=\vec{0}&lt;&#x2F;script&gt;), and by definition, in that local rest frame,  &lt;script type=&quot;math&#x2F;tex&quot;&gt;dt = d\tau&lt;&#x2F;script&gt;. Therefore, assuming  &lt;script type=&quot;math&#x2F;tex&quot;&gt;(ds)^2\gt 0&lt;&#x2F;script&gt; (later we shall see that this is called time-like events),&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+(ds)^2 &amp;= (c\cdot d\tau)^2 \\
+d\tau &amp;= \frac{ds}{c}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Thus, we can see&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+\tau &amp;= \int_{locus} \frac{ds}{c} \\
+&amp;=\int^{t_2}_{t_1} \frac{\sqrt{c^2-(\frac{|d\vec{t}|}{dt})^2}}{c}\, dt \\
+&amp;=\int^{t_2}_{t_1} \sqrt{1-(\frac{v(t)}{c})^2}\, dt \\
+&amp;=\int^{t_2}_{t_1} \, \frac{dt}{\gamma(t)}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Likewise, given   &lt;script type=&quot;math&#x2F;tex&quot;&gt;(ds)^2\lt 0&lt;&#x2F;script&gt; (later we shall see that this is called space-like events), we shall have proper distance differential &lt;script type=&quot;math&#x2F;tex&quot;&gt;d\sigma&lt;&#x2F;script&gt; by&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+(ds)^2 &amp;=-(d\sigma)^2 \\
+d\sigma &amp;= \sqrt{-(ds)^2} \\
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;(Here we cannot write it as an integral with respect to time because time may not be a parameter to this as the locus is always have slope smaller than 1).&lt;&#x2F;p&gt;
+&lt;p&gt;Now we define a few more terms.&lt;&#x2F;p&gt;
+&lt;p&gt;Coordinate time for event &lt;script type=&quot;math&#x2F;tex&quot;&gt;A&lt;&#x2F;script&gt; under one inertial frame is simply the time component of that event under the frame.&lt;&#x2F;p&gt;
+&lt;p&gt;Coordinate position is likewise the position component under the frame for one particular event.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we can analyze the conclusions.
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;a-graph-based-note-on-part-of-the-special-theory-of-relativity&#x2F;conclusions-of-tos.jpg&quot; alt=&quot;Conclusions of relativity of simultaneity&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;As shown above, coordinate time is reason for time dilation (&lt;script type=&quot;math&#x2F;tex&quot;&gt;c\gamma t\gt ct&lt;&#x2F;script&gt;). However, the same event &lt;script type=&quot;math&#x2F;tex&quot;&gt;A&lt;&#x2F;script&gt; measured at the same place under &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; is &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{ct}{\gamma}\lt ct&lt;&#x2F;script&gt; (time &amp;quot;contraction&amp;quot;).&lt;&#x2F;p&gt;
+&lt;p&gt;Same argument can be employed for the length. However, there is a very interesting phenomenon.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;a-graph-based-note-on-part-of-the-special-theory-of-relativity&#x2F;head-and-tail.jpg&quot; alt=&quot;Head and tail&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In the above picture, one in &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&lt;&#x2F;script&gt; can see both event (head and tail) at the same time. However, it is not the case for ones in &lt;script type=&quot;math&#x2F;tex&quot;&gt;S&#x27;&lt;&#x2F;script&gt;. They can only see either head or tail.&lt;&#x2F;p&gt;
+&lt;p&gt;Do head and tail exist at the same time? It depends on your reference frame. And indeed, above example illustrates how &lt;strong&gt;absurd&lt;&#x2F;strong&gt; it is to compare phenomenons between frames together. One shall &lt;strong&gt;not&lt;&#x2F;strong&gt; do that unless things don&#x27;t change, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;In addition to that, it is also pretty easy to see comparison between proper events makes sense if and only if both locuses start and end at the same event. It also follows that at least one of these two locus undergoes acceleration if the proper time differ. One shall be able to further prove that the one undergoing acceleration has less proper time.&lt;&#x2F;p&gt;
+&lt;p&gt;Proof is like this. Take the inertial frame in which the inertial locus is in as our reference frame for the rest of the proof. Since another locus is accelerating, it has some velocity with respect to our frame. Therefore the integrand &lt;script type=&quot;math&#x2F;tex&quot;&gt;\sqrt{1-(\frac{v(t)}{c})^2}\lt 0&lt;&#x2F;script&gt; for some time intervals, resulting in a smaller area under the curve and hence proper time.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-twin-paradox&quot;&gt;The twin paradox&lt;&#x2F;h1&gt;
+&lt;p&gt;The following video explained it intuitively.&lt;&#x2F;p&gt;
+&lt;div &gt;
+    &lt;iframe
+        src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;0iJZ_QGMLD0&quot;
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen&gt;
+    &lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;On the other hand, proper time is shorter for accelerated clock is also a direct argument for this paradox. Brother on the ship experienced less time, but he saw brother on earth experiencing longer time (see picture with &amp;quot;inverse&amp;quot; proper time function above). Those lines are continuously sweeping out the time axis of brother-on-earth frame.&lt;&#x2F;p&gt;
+&lt;p&gt;Another thing to note is that it is mathematically impossible to have a sharp turnaround because in that way &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{r}(t)&lt;&#x2F;script&gt; is not differentiable, giving no velocity at the turning point. Even if it is possible, you will see your brother on earth age within just a snap.&lt;&#x2F;p&gt;
+&lt;p&gt;You can be younger under acceleration.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;unsolved-bits&quot;&gt;Unsolved bits&lt;&#x2F;h1&gt;
+&lt;p&gt;There are lots to learn in STR, namely, Relativistic dopler&#x27;s effect, energy-mass equivalence, etc. I didn&#x27;t cover these, but hopefully with basic tools here and infinite amount of mathematical talent, you can derive out all by yourself.&lt;&#x2F;p&gt;
+&lt;p&gt;I am wondering if there is a physical explanation that relates relativity of simultaneity and the fact that information travels at the speed of light.&lt;&#x2F;p&gt;
+&lt;p&gt;I didn&#x27;t use a lot of mathematics here and drew a lot of graphs, because I came to understand: to learn physics well, you should see phenomenons without using heavy equations.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Migration and whatnot in past 10 months</title>
+		<published>2020-11-27T00:00:00+00:00</published>
+		<updated>2020-11-27T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/hello-world/" type="text/html"/>
+		<id>https://lexuge.github.io/hello-world/</id>
+		<content type="html">&lt;p&gt;Welcome to Zola!&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+   r_{1}=&amp;\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}k\lambda{}\ell+d^{4}+\ell^{2}}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(k\lambda{}\ell{}+d^{2}+2\ell^{2})}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}[2\ell{}(k\lambda{}+\ell)+d^{2}]}{4d^{2}}\\
+   \approx{}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2}+d^{2})}{4d^{2}}\\
+   \approx{}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2})}{4d^{2}}\\
+   ={}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+4d^{2}\ell{}^{2}}{4d^{2}}
+\end{aligned}&lt;&#x2F;script&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>More rigorous deduction and proof on Young&#x27;s double-slit experiment</title>
+		<published>2020-02-09T00:00:00+00:00</published>
+		<updated>2020-02-09T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/" type="text/html"/>
+		<id>https://lexuge.github.io/more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Recently, I have been studying physical optics. I found the formulas that are given in the textbook in the section of profound Young&#x27;s double-slit experiment are quite &amp;quot;approximate&amp;quot;. Since I always have the belief that Physics should be progressed in a mathematical manner with rigorous deductions and proofs, I decided to deduct some of the parts by myself and also try to prove the conclusions that are given in the textbook without proofs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;what-are-we-gonna-to-do&quot;&gt;What are we gonna to do?&lt;&#x2F;h1&gt;
+&lt;p&gt;Before our journey starts, we should first decide what to do. In this post, I will show you how to calculate the positions of any fringes on the viewing screen. Also I will show how the light intensity varies through different bright or black fringes on the screen (of course with proof!). And through the function that we acquired above, we will graph it.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;prerequisite&quot;&gt;Prerequisite&lt;&#x2F;h1&gt;
+&lt;p&gt;We need to first define two sets&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+     \Alpha &amp;= \{2k|k\in{}\Z\}\\
+     \Beta  &amp;= \{2k+1|k\in{}\Z\}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Obviously, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Alpha&lt;&#x2F;script&gt; is the set of all the even numbers while &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Beta&lt;&#x2F;script&gt; is the set of all the odd numbers. We also need to define some variables that have their own meanings.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment&#x2F;double-slit-demo.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Above is a image that illustrated the experiment.&lt;&#x2F;p&gt;
+&lt;p&gt;We hereby define the &lt;script type=&quot;math&#x2F;tex&quot;&gt;d&lt;&#x2F;script&gt; as the length between two slits and &lt;script type=&quot;math&#x2F;tex&quot;&gt;\ell&lt;&#x2F;script&gt; as the length between the slits and viewing screen. Also, the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\lambda&lt;&#x2F;script&gt; is for the wavelength of the light and &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; is the postion of the intersection of the two waves on the screen (with respect to the middle point of &lt;script type=&quot;math&#x2F;tex&quot;&gt;d&lt;&#x2F;script&gt;, upper side is for positive). The upper one is &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{2}&lt;&#x2F;script&gt; and the down one is &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{1}&lt;&#x2F;script&gt;. Assume &lt;script type=&quot;math&#x2F;tex&quot;&gt;\ell\gg{}d\gg{}\lambda{}&lt;&#x2F;script&gt;. Also we are not talking about &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\to{}\pm{}\infty{}&lt;&#x2F;script&gt; here, causing our approximation based on this assumption.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;general-function-and-qualitative-analysis-on-it&quot;&gt;General function and qualitative analysis on it.&lt;&#x2F;h1&gt;
+&lt;p&gt;First we need to investigate into the general function &lt;script type=&quot;math&#x2F;tex&quot;&gt;f&lt;&#x2F;script&gt; that could describe the wave at any given time &lt;script type=&quot;math&#x2F;tex&quot;&gt;t&lt;&#x2F;script&gt; with given &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; on the screen.&lt;&#x2F;p&gt;
+&lt;p&gt;For a circular wave &lt;script type=&quot;math&#x2F;tex&quot;&gt;\psi&lt;&#x2F;script&gt;, the intensity &lt;script type=&quot;math&#x2F;tex&quot;&gt;I\propto{}A^{2}&lt;&#x2F;script&gt;. And since &lt;script type=&quot;math&#x2F;tex&quot;&gt;I=\frac{P}{2\pi{}r}&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;I\propto{}\frac{1}{r}&lt;&#x2F;script&gt;. So from two above, we could see &lt;script type=&quot;math&#x2F;tex&quot;&gt;A\propto{}\frac{1}{\sqrt{r}}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here, in order to make it simple, for the sake of the qualitative analysis, we set the coefficient to one. From the knowledge that we acquire, at any given point, the wave would be the algebraic sum of the waves. The two waves are, in this scenario:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+    \psi_{1}(r_{1}) &amp;= \frac{A}{\sqrt{r_{1}}}\cos{(\frac{2\pi}{\lambda}r_{1}-vt)}\\
+    \psi_{2}(r_{2}) &amp;= \frac{A}{\sqrt{r_{2}}}\cos{(\frac{2\pi}{\lambda}r_{2}-vt)}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Thus, the total wave &lt;script type=&quot;math&#x2F;tex&quot;&gt;\psi&lt;&#x2F;script&gt; would be:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\psi(r_{1},r_{2}) = \frac{A}{\sqrt{r_{1}}}\cos{(\frac{2\pi}{\lambda}r_{1}-vt)}+\frac{A}{\sqrt{r_{2}}}\cos{(\frac{2\pi}{\lambda}r_{2}-vt)}&lt;&#x2F;script&gt;
+&lt;p&gt;Here goes the tricky part. Since &lt;script type=&quot;math&#x2F;tex&quot;&gt;\cos{x}&lt;&#x2F;script&gt; varies in &lt;script type=&quot;math&#x2F;tex&quot;&gt;[-1,1]&lt;&#x2F;script&gt;, the amplitude of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\psi&lt;&#x2F;script&gt; would also vary in &lt;script type=&quot;math&#x2F;tex&quot;&gt;[A(|\frac{1}{\sqrt{r_{2}}}-\frac{1}{\sqrt{r_{1}}}|),A(\frac{1}{\sqrt{r_{1}}}+\frac{1}{\sqrt{r_{2}}})]&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We here investigate the range of the amplitude of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\psi&lt;&#x2F;script&gt; because the light intensity would be proportional to the &lt;script type=&quot;math&#x2F;tex&quot;&gt;A^{2}&lt;&#x2F;script&gt;. Thus, if we could determine the condition of being black or bright, then we could work out the positions of fringes.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to get &lt;script type=&quot;math&#x2F;tex&quot;&gt;A(|\frac{1}{\sqrt{r_{2}}}-\frac{1}{\sqrt{r_{1}}}|)&lt;&#x2F;script&gt;, there must be &lt;script type=&quot;math&#x2F;tex&quot;&gt;\cos{(\frac{2\pi}{\lambda}r_{1}-vt)}=-\cos{(\frac{2\pi}{\lambda}r_{2}-vt)}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;And for the &lt;script type=&quot;math&#x2F;tex&quot;&gt;A(\frac{1}{\sqrt{r_{1}}}+\frac{1}{\sqrt{r_{2}}})&lt;&#x2F;script&gt;, two waves must be in phase.
+Thus for the lowest amplitude,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+     (\frac{2\pi}{\lambda}r_{1}-vt)-(\frac{2\pi}{\lambda}r_{2}-vt)&amp;=k\pi\\
+     \frac{2\pi}{\lambda}(r_{1}-r_{2})&amp;=k\pi\\
+     r_{1}-r_{2}&amp;=\frac{k\lambda{}}{2}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Beta{}&lt;&#x2F;script&gt; (&lt;script type=&quot;math&#x2F;tex&quot;&gt;k\gt0&lt;&#x2F;script&gt; for upper black fringes).&lt;&#x2F;p&gt;
+&lt;p&gt;On the other hand, for the highest amplitude, we must fulfill &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{1}-r_{2}=\frac{k\lambda{}}{2}&lt;&#x2F;script&gt; where &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Alpha&lt;&#x2F;script&gt; (&lt;script type=&quot;math&#x2F;tex&quot;&gt;k\leq{}0&lt;&#x2F;script&gt; for bright fringes in upper section or in perfect middle).&lt;&#x2F;p&gt;
+&lt;p&gt;All in all, we could use &lt;a name=&quot;tag-1&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\tag{1}r_{1}-r_{2}=\frac{k\lambda{}}{2}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Z&lt;&#x2F;script&gt; to determine the relation between &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{1}&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{2}&lt;&#x2F;script&gt; when they form either bright or black fringes (depends on whether &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Alpha&lt;&#x2F;script&gt; or &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in\Beta&lt;&#x2F;script&gt;).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;deduction-of-x-given-the-number-of-fringes&quot;&gt;Deduction of &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; given the number of fringes.&lt;&#x2F;h1&gt;
+&lt;p&gt;From &lt;a href=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment&#x2F;#tag-1&quot;&gt;first equation&lt;&#x2F;a&gt; that we deduced above, we now use it to work out the &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; with given &lt;script type=&quot;math&#x2F;tex&quot;&gt;k&lt;&#x2F;script&gt;. First we could see that,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+   r_{1}&amp;=\sqrt{(x+\frac{d}{2})^{2}+\ell^{2}}\\
+   r_{2}&amp;=\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Substitute them into the equation,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+    \sqrt{(x+\frac{d}{2})^{2}+\ell^{2}}-\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}&amp;=\frac{k\lambda{}}{2}\\
+    \sqrt{(x+\frac{d}{2})^{2}+\ell^{2}}&amp;=\frac{k\lambda{}}{2}+\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}\\
+    (x+\frac{d}{2})^{2}+\ell^{2}&amp;=\frac{k^{2}\lambda^{2}}{4}+k\lambda{}\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}+(x-\frac{d}{2})^{2}+\ell^{2}\\
+    2xd-\frac{k^{2}\lambda^{2}}{4}&amp;=k\lambda{}\sqrt{(x-\frac{d}{2})^{2}+\ell^{2}}\\
+    (2xd-\frac{k^{2}\lambda^{2}}{4})^{2}&amp;=k\lambda{}(x^{2}-xd+\frac{d^{2}}{4}+\ell^{2})\\ 4x^{2}d^{2}-xdk^{2}\lambda^{2}+\frac{k^{4}\lambda^{4}}{16}&amp;=k^{2}\lambda^{2}x^{2}-k^{2}\lambda^{2}xd+\frac{k^{2}\lambda^{2}d^{2}}{4}+k^{2}\lambda^{2}\ell^{2}\\
+    (4d^{2}-k^{2}\lambda^{2})x^{2}&amp;=\frac{4k^{2}\lambda^{2}d^{2}+16k^{2}\lambda^{2}\ell^{2}-k^{4}\lambda^{4}}{16}\\
+    x^{2}&amp;=\frac{4k^{2}\lambda^{2}d^{2}+16k^{2}\lambda^{2}\ell^{2}-k^{4}\lambda^{4}}{16(4d^{2}-k^{2}\lambda^{2})}\\
+    x&amp;=\pm\sqrt{\frac{k^{2}\lambda^{2}}{16}}\sqrt{\frac{4d^{2}+16\ell^{2}-k^{2}\lambda^{2}}{4d^{2}-k^{2}\lambda^{2}}}\\
+    x&amp;=\pm\frac{k\lambda}{4}\sqrt{\frac{4d^{2}+16\ell^{2}-k^{2}\lambda^{2}}{4d^{2}-k^{2}\lambda^{2}}}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Since the &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; is too complicated, we need to do one approximation to that. Since &lt;script type=&quot;math&#x2F;tex&quot;&gt;\ell{}\gg{}d\gg{}\lambda{}&lt;&#x2F;script&gt;,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+    x&amp;\approx\pm\frac{k\lambda}{4}\sqrt{\frac{16\ell^{2}}{4d^{2}}}\\
+    &amp;=\pm\frac{k\lambda{}\ell}{2d}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Since &lt;script type=&quot;math&#x2F;tex&quot;&gt;x=-\frac{k\lambda{}\ell}{2d}&lt;&#x2F;script&gt; doesn&#x27;t fulfill the original equation, the final solution to that would be: &lt;a name=&quot;tag-2&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\tag{2}x=\frac{k\lambda{}\ell}{2d}&lt;&#x2F;script&gt;
+&lt;p&gt;Equation above would be quite useful for you to determine the position of the fringes.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;light-intensity-function&quot;&gt;Light intensity function&lt;&#x2F;h1&gt;
+&lt;p&gt;Based on what we have discussed in first section, the function of light intensity &lt;script type=&quot;math&#x2F;tex&quot;&gt;I&lt;&#x2F;script&gt; is&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;I(k)=\epsilon^{2}A^{2}(\frac{1}{\sqrt{r_{1}}}+(-1)^{k}\frac{1}{\sqrt{r_{2}}})^{2}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;\epsilon&lt;&#x2F;script&gt; is the coefficient of proportion. (Here we don&#x27;t care about the relative order of &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{1}&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{2}&lt;&#x2F;script&gt; since they are ultimately squared).&lt;&#x2F;p&gt;
+&lt;p&gt;Based on the &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; that we acquired &lt;a href=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment&#x2F;#tag-2&quot;&gt;above&lt;&#x2F;a&gt;, we could work out &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{1}&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{2}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+    r_{1}&amp;=\sqrt{\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}}\\
+    r_{2}&amp;=\sqrt{\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Thus, &lt;a name=&quot;tag-3&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\tag{3}I(k)=(\epsilon A\frac{1}{[\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}}+(-1)^{k}\frac{1}{[\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}})^{2}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Z&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We now graph separately the function when &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Beta&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Alpha&lt;&#x2F;script&gt; (&lt;strong&gt;Following is not drawn to scale, only represents trend&lt;&#x2F;strong&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment&#x2F;double-slit.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;On the graph, the green graph is (&lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Alpha&lt;&#x2F;script&gt;) and the purple one is (&lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Beta{}&lt;&#x2F;script&gt;) As you can see, as the &lt;script type=&quot;math&#x2F;tex&quot;&gt;k&lt;&#x2F;script&gt; goes along the either side of &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; axis, the
+value of green one will go smaller.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;proof&quot;&gt;Proof&lt;&#x2F;h2&gt;
+&lt;p&gt;Here we will prove under &lt;strong&gt;approximation&lt;&#x2F;strong&gt;, the light intensity of bright fringes will go smaller and the intensity of black ones will stay &lt;script type=&quot;math&#x2F;tex&quot;&gt;0&lt;&#x2F;script&gt;. It&#x27;s actually not precise but I can only find the proof to this extend. I have been finding the proof without compromising the beauty of mathematics for almost two days. But it turned out to be nothing based on my ability.&lt;&#x2F;p&gt;
+&lt;p&gt;So how to prove?&lt;&#x2F;p&gt;
+&lt;p&gt;Since we are doing qualitative analysis, we may first simplify the &lt;a href=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;more-rigorous-deduction-and-proof-on-youngs-double-slit-experiment&#x2F;#tag-3&quot;&gt;third equation&lt;&#x2F;a&gt;. It could be&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;I(k)=(\frac{1}{[\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}}+(-1)^{k}\frac{1}{[\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}]^{\frac{1}{4}}})^{2}&lt;&#x2F;script&gt;
+&lt;p&gt;Now focus on&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\frac{(k\lambda{}\ell\pm{}d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}&lt;&#x2F;script&gt;
+&lt;p&gt;We have&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+   r_{1}=&amp;\frac{(k\lambda{}\ell+d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}k\lambda{}\ell+d^{4}+\ell^{2}}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(k\lambda{}\ell{}+d^{2}+2\ell^{2})}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}[2\ell{}(k\lambda{}+\ell)+d^{2}]}{4d^{2}}\\
+   \approx{}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2}+d^{2})}{4d^{2}}\\
+   \approx{}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2})}{4d^{2}}\\
+   ={}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+4d^{2}\ell{}^{2}}{4d^{2}}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Similarly,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+   r_{2}=&amp;\frac{(k\lambda{}\ell-d^{2})^{2}+4d^{2}\ell^{2}}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}-2d^{2}k\lambda{}\ell+d^{4}+\ell^{2}}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(-k\lambda{}\ell{}+d^{2}+2\ell^{2})}{4d^{2}}\\
+   =&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}[2\ell{}(-k\lambda{}+\ell)+d^{2}]}{4d^{2}}\\
+   \approx{}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2}+d^{2})}{4d^{2}}\\
+   \approx{}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+2d^{2}(2\ell{}^{2})}{4d^{2}}\\
+   ={}&amp;\frac{k^{2}\lambda{}^{2}\ell^{2}+4d^{2}\ell{}^{2}}{4d^{2}}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Under this scenario, &lt;script type=&quot;math&#x2F;tex&quot;&gt;r_{1}=r_{2}&lt;&#x2F;script&gt;, thus it&#x27;s obvious that the black fringes are &lt;script type=&quot;math&#x2F;tex&quot;&gt;0&lt;&#x2F;script&gt; intensified.&lt;&#x2F;p&gt;
+&lt;p&gt;And for the bright fringes,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\frac{d}{dk}I=-\frac{4 \, \left(\frac{1}{4}\right)^{\frac{3}{4}} k l^{2} m^{2}}{d^{2} \left(\frac{k^{2} l^{2} m^{2} + 4 \, d^{2} l^{2}}{d^{2}}\right)^{\frac{5}{4}}}&lt;&#x2F;script&gt;
+&lt;p&gt;For &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\lt0&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{d}{dk}I\gt0&lt;&#x2F;script&gt;, while &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\gt0&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{d}{dk}I\lt0&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;k=0&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{d}{dk}I=0&lt;&#x2F;script&gt;, by which we can say that the light is at its peak when &lt;script type=&quot;math&#x2F;tex&quot;&gt;k=0&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;I found out its just crazy to apply math to physics. I am too tired because of this. If you like it, please buy me a cup of coffee.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Behind the 2019-nCoV, who sentenced country to death?</title>
+		<published>2020-01-25T00:00:00+00:00</published>
+		<updated>2020-01-25T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/behind-the-2019-ncov-who-sentenced-country-to-death/" type="text/html"/>
+		<id>https://lexuge.github.io/behind-the-2019-ncov-who-sentenced-country-to-death/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;As the spread of the Coronavirus goes on, China, the world&#x27;s second-biggest economy, has been facing a big crisis of the newly discovered virus, 2019-nCoV. It has been 17 years since the terrifying war to SARS, but it seems little better. And most important, &lt;strong&gt;why?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;what-s-going-on&quot;&gt;What&#x27;s going on?&lt;&#x2F;h1&gt;
+&lt;p&gt;It is still unknown when did the virus comes out of the cage. Some rumor that the first group of patients was reported on December 8, 2019. Same from the source of the rumor, it is saying that doctors perceived these patients as the newly infected people of new SARS-like, unclear-sourced. However, it has not been seen by the public by that time until the drastic spread of the epidemic.&lt;&#x2F;p&gt;
+&lt;p&gt;On December 30, 2019, one picture of &lt;a href=&quot;https:&#x2F;&#x2F;zh.wikisource.org&#x2F;zh-hans&#x2F;%E5%85%B3%E4%BA%8E%E5%81%9A%E5%A5%BD%E4%B8%8D%E6%98%8E%E5%8E%9F%E5%9B%A0%E8%82%BA%E7%82%8E%E6%95%91%E6%B2%BB%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%B4%A7%E6%80%A5%E9%80%9A%E7%9F%A5&quot;&gt;internal announcement&lt;&#x2F;a&gt; of arrangement and preparation on the ongoing virus from the claimed source of Wuhan CDC, has been leaked on the Chinese internet. And the CDC of Wuhan later had to admit that the announcement is true under the pressure of inquiries. According to Diyicaijing, on December 31, 2019, the market was still under normal operation, and nobody had heard the new virus. With the same reason of announcement, the suspected epicenter and origin of the virus, the Huanan Seafood Market, was closed.&lt;&#x2F;p&gt;
+&lt;p&gt;Today, I interviewed one person in Wuhan currently, inquiring about his perceptions and personal experiences during the whole period. He said he was shocked by the news headline of the new unclear-sourced virus as he came back to his home at Wuhan on December 30, 2019. People in his WeChat moment were retweeting constantly about the newly disclosed announcement issued by Wuhan CDC. But, in contrast to the heating responses online to the coronavirus, people seem not willing to take action in reality, not being aware of the necessity of covering their mouths with masks.&lt;&#x2F;p&gt;
+&lt;p&gt;And from his description, the city was running under the traditional model of the spring festival, without awareness of the surge of infections ahead anyway. And as we can see from the news, government and communities were continuing to organize different collective activities during the period of January 1, 2020, to January 20, 2020. These activities include gathering people for a feast (link dead) and &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200128094741&#x2F;https:&#x2F;&#x2F;m.sohu.com&#x2F;a&#x2F;368564463_713573&quot;&gt;holding party and show even if some of the crew members were showing symptoms of infection&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;The whole society went on as if there was nothing happened&amp;quot;, he said. While people who were not infected pretended to have nothing heard, the patients, on the other hand, were getting trouble in terms of either reality and virtual. Some of the Chinese Weibo users who were relatives to patients or patients themselves were tweeting that they were facing a shortage of detection and the fact that unable to be treated.&lt;&#x2F;p&gt;
+&lt;p&gt;On the other hand, government and other CCP backed institutions were saying that the outbreak was under full control. But ironically, the one who said that was infected after soon. And the People&#x27;s Daily had no coverage on the ongoing crisis in Wuhan, but full coverage of Mr. Xi&#x27;s whatever.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;The situation held on until the report of the announcement of Zhong Nanshan, which has shaken the most of the people&#x27;s confidence because of the confession of the presence of person-to-person transmission.&amp;quot;, he said, &amp;quot;no sooner after the news from Zhong Nanshan, I have heard the news of Wuhan lockdown.&amp;quot; On that day, he went back to Wuhan from other cities, but he perceived no special regulation or screening in the train station. People in the train station were not getting covered by masks. Luckily, the commodities in Wuhan are currently at the status of full supply according to him.&lt;&#x2F;p&gt;
+&lt;p&gt;As the first case of infected patient emerged in Beijing, which is also the first case outside Wuhan, the central government and leader Xi Jinping, got to say the great incentives to beat down whatever epidemics. &amp;quot;Confronted with the grave situation of this accelerating spread of pneumonia from infections with the novel coronavirus, we must step up the centralized and united leadership under the party central&amp;quot; leadership, Mr. Xi said. However, he has never commented on the situation of the Wuhan outbreak after that.&lt;&#x2F;p&gt;
+&lt;p&gt;After Xi&#x27;s significant comment, the whole country got into the status that is supposed to be in Wuhan 40 days before. But it&#x27;s too late.&lt;&#x2F;p&gt;
+&lt;p&gt;Comparing to the goofing off behavior of both central and local governments. Hong Kong government sensed the outbreak before it got truly started up. They set up the screenings in portals and airports. So did Taiwan and Macau. Soon after, Thailand did so. However, for Wuhan, it did not even about 20 days later, which is public outrage.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite the big underlying issues, it is great to see that the government does take it faster than what they did 17 years ago.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;why&quot;&gt;Why?&lt;&#x2F;h1&gt;
+&lt;p&gt;It&#x27;s very subjective and complicated to answer such a question. But for me, I think we are taking two faulty moves that eliminating either of which could help.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;long-taken-strategy-of-media-censorship-and-surveillance&quot;&gt;Long-taken strategy of media censorship and surveillance&lt;&#x2F;h2&gt;
+&lt;p&gt;It is quite clear that China is taking pressing censorships on either social media and press. It is very important to have wide and great freedom for journalists and press to distribute copies of true stories without any manipulations. Though it is hard to ensure the absence of manipulations, different aspects of arguments and manipulations help us to figure out what the truth is. This is widely accepted by the international community but not by China.&lt;&#x2F;p&gt;
+&lt;p&gt;In this case, even if we don&#x27;t have a fast-mobilizing government behind, the outbreak scale could be reduced if the truth of the discovery of unclear-sourced virus is reported by journalists. By reporting and undercover, there would be no situation in which the whole society was marching towards the lake of epidemics because it was blind. People could be well-informed about the severity of the new disease, but not still be hanging out with no protections every day. Media plays a role in getting rid of ignorance for the citizens in the country. And if we have a bunch of blind, eye-covered or hand-cuffed media, it is clear as it is now of where our country would be led to. The answer is sentenced to death.&lt;&#x2F;p&gt;
+&lt;p&gt;Our strategy now, and same for almost every single big tragedy, is to whitewash, trying to gloss over scandals, outrages, faults. For why this is emerging, I don&#x27;t want to talk about it cause it&#x27;s out of our today&#x27;s scope.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fast-mobilizing-and-democratic-government&quot;&gt;Fast-mobilizing and democratic government&lt;&#x2F;h2&gt;
+&lt;p&gt;I know it&#x27;s very annoying to be a leader of a democratic society or government cause you will face different arguments against you almost every moment. But what makes you upset helps society progress.&lt;&#x2F;p&gt;
+&lt;p&gt;Here I&#x27;m not talking about which system is the best to be a democratic one cause I don&#x27;t think any of the current presented systems is great enough to be a pure democracy.&lt;&#x2F;p&gt;
+&lt;p&gt;So why does democracy or being democratic help? Because the government or the executive branch will be sensitive about what is happening and not getting into the deadlock.&lt;&#x2F;p&gt;
+&lt;p&gt;And China gets both of two down. Few will deny that China&#x27;s system is getting trapped by itself because every part is relatively blind. Furthermore, the system is quite unstable because what makes sense is the direction of the supreme leader. Today, he is Mr. Xi. The idea of the whole system gets almost unchanged as it was in Ming or Qing dynasties. One of the obvious drawbacks of this system is that it is quite insensitive. Big events need to undertake a long process to get informed or ready. And second is the deadlock. In Chinese society, people are refrained or afraid to raise your problem or protest cause we are under the great influence of one supreme leader. So under this scenario, people who can perceive have no guts to say. People who can say have no perceptions, or even not want anyone to stand out. Thus, the government falls in deadlock.&lt;&#x2F;p&gt;
+&lt;p&gt;But it is also very hard to make it fast-mobilizing under democracy. Cause sometimes arguments itself can cause problems, such as bipartisan issues. Keep in mind to make the government a swift one is also important. One way of keeping this is by getting the executive branch its appropriate power. Put a &amp;quot;supreme leader under control&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;So even if there is no freedom of media (most time not likely to be seen in a democratic society), the government can silently get all of the preventions enforced and information informed. But not in a way in which people are gathering together for the festival while the virus is going in surge underlying.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;end&quot;&gt;End&lt;&#x2F;h1&gt;
+&lt;p&gt;If you are smart, then you may see that one autonomy which is undemocratic, is most likely not giving domestic medias freedom because disclosures always shake regimes. And if you have no freedom for journalists and media, there will also likely be no democracy because people are tamed to give up rights, any bits of them.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Review of Electrostatics and Electromagnetism</title>
+		<published>2020-01-25T00:00:00+00:00</published>
+		<updated>2020-01-25T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/review-of-electrostatics-and-electromagnetism/" type="text/html"/>
+		<id>https://lexuge.github.io/review-of-electrostatics-and-electromagnetism/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;It has been a long time since I planned to write this review. This post covers Electrostatics, Circuit, Magnetism and Electromagnetism in my own structure of understanding of all above. And since the post is guided by neither teachers nor guiders, content may &lt;strong&gt;not&lt;&#x2F;strong&gt; be correct.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;electrostatics&quot;&gt;Electrostatics&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;charges-and-its-related-concepts&quot;&gt;Charges and its related concepts.&lt;&#x2F;h2&gt;
+&lt;p&gt;Charge is the bedrock of understanding all the concepts inelectrostatics and even further, because it relates to the electric field and electric potential.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;electric-charge&quot;&gt;Electric Charge&lt;&#x2F;h3&gt;
+&lt;p&gt;According to &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Electric_charge&quot;&gt;Wikipedia&lt;&#x2F;a&gt;, electric charge is the physical property of matter that causes it to experience a force when placed in an electromagnetic field. The charge can be grouped by either positive or negative. More specifically:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;positive: rubbed glass rod.&lt;&#x2F;li&gt;
+&lt;li&gt;negative: rubbed plastic ruler (amber).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;And the charges have the trait that &lt;strong&gt;unlike charges attract, like charges repel.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The unit of the amount of the charge is Coulomb, annotated as &lt;script type=&quot;math&#x2F;tex&quot;&gt;\text{C}&lt;&#x2F;script&gt;, where &lt;script type=&quot;math&#x2F;tex&quot;&gt;\text{C}=\text{A}\times\text{s}&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The amount of charges of one proton is notated as &lt;script type=&quot;math&#x2F;tex&quot;&gt;e&lt;&#x2F;script&gt;, where &lt;script type=&quot;math&#x2F;tex&quot;&gt;e=1.6022\times{}10^{-19}\text{C}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The electric charge is quantized, meaning no fraction of &lt;script type=&quot;math&#x2F;tex&quot;&gt;e&lt;&#x2F;script&gt; could be gained.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;law-of-conservation-of-electric-charge&quot;&gt;Law of Conservation of electric charge&lt;&#x2F;h3&gt;
+&lt;p&gt;This is another version of conservation of energy in the field of electrostatics. It states that:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;No &lt;strong&gt;net&lt;&#x2F;strong&gt; electric charge can be created or destroyed.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Remember the thing that it states is about is &lt;strong&gt;net&lt;&#x2F;strong&gt; charge. Thus it doesn&#x27;t mean that there is no way to get something charged.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ways-to-get-something-charged&quot;&gt;Ways to get something charged&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;induction&quot;&gt;Induction&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;em&gt;Induction&lt;&#x2F;em&gt; means to induce the charge while not truly give away the existing ones on one particular object.&lt;&#x2F;p&gt;
+&lt;p&gt;There are two ways of doing so.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Induction by separation
+One positive charged object approaches another neutralized object. Since &lt;strong&gt;unlike charges attract, like charges repel&lt;&#x2F;strong&gt;, the near end of neutralized object would accumulate a group of negative charges, while the positive charges are repelled. If you now cut the original neutralized object in the middle, you can get one positive charged and one negative charged object out of it.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Induction by grounding
+Same approach as above, instead of cutting it in the middle, we wire the far end of it to the ground.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;conduction&quot;&gt;Conduction&lt;&#x2F;h4&gt;
+&lt;p&gt;One charged conductor contacts another uncharged &lt;strong&gt;conductor&lt;&#x2F;strong&gt;. Note that &lt;strong&gt;conductor&lt;&#x2F;strong&gt; in the ideal way implies that electrons can move in it &lt;strong&gt;almost&lt;&#x2F;strong&gt; freely (Resistivity &lt;script type=&quot;math&#x2F;tex&quot;&gt;\to{}0^{+}&lt;&#x2F;script&gt;).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;force-and-field-by-charges&quot;&gt;Force and field by charges&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;coulomb-s-law&quot;&gt;Coulomb&#x27;s law&lt;&#x2F;h3&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;F=k\frac{Q_{1}Q_{2}}{r^{2}}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;k=\frac{1}{4\pi{}\varepsilon_{0}}&lt;&#x2F;script&gt;. And &lt;script type=&quot;math&#x2F;tex&quot;&gt;\varepsilon_{0}=8.85\cdot{}10^{-12}\frac{\text{C}^{2}}{\text{N}\cdot{}\text{m}^{2}}&lt;&#x2F;script&gt; is the permittivity of free space.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE: For static situation only&lt;&#x2F;strong&gt;. The direction of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{F}&lt;&#x2F;script&gt; follows the rule of the attraction and repelement between charges.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;electric-field&quot;&gt;Electric field&lt;&#x2F;h3&gt;
+&lt;p&gt;This is a manmade concept which is deduced from the electric force.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\vec{E}=\frac{\vec{F}}{q}&lt;&#x2F;script&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;E=k\frac{Q}{r^{2}}&lt;&#x2F;script&gt;
+&lt;p&gt;As long as the &lt;script type=&quot;math&#x2F;tex&quot;&gt;q&lt;&#x2F;script&gt; doesn&#x27;t exert a large force on &lt;script type=&quot;math&#x2F;tex&quot;&gt;Q&lt;&#x2F;script&gt; that could move &lt;script type=&quot;math&#x2F;tex&quot;&gt;Q&lt;&#x2F;script&gt;, we can calculate &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{F}=q\vec{E}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;electric-field-lines-efl&quot;&gt;Electric Field Lines (EFL)&lt;&#x2F;h3&gt;
+&lt;p&gt;EFL has these three traits:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;EFL indicates the directions of the electric field.&lt;&#x2F;li&gt;
+&lt;li&gt;number of the EFLs passing through a given area which is normal to EFLs, is proportional to the magnitude of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt;.&lt;a name=&quot;rule2&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The number of lines pointing to the nodes is proportional to the magnitude of the electric charge of the node.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;electric-field-and-conductor-static&quot;&gt;Electric Field and Conductor (static)&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;script type=&quot;math&#x2F;tex&quot;&gt;\sum{}\vec{E}=0&lt;&#x2F;script&gt; inside the conductor.
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Refer to the &lt;a href=&quot;https:&#x2F;&#x2F;web.mit.edu&#x2F;sahughes&#x2F;www&#x2F;8.022&#x2F;lec05.pdf&quot;&gt;MIT Lecture Notes&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;External &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; is at normal at every point on the surface of the conductor.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;If the tangential component of the external &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; is present at the point(s) of the surface. The charge(s) at these point(s) will flow along the surface in the direction of the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; (opposite if &lt;script type=&quot;math&#x2F;tex&quot;&gt;q&lt;&#x2F;script&gt; is negative), resulting in a &lt;strong&gt;dynamic&lt;&#x2F;strong&gt; situation rather than a &lt;strong&gt;static&lt;&#x2F;strong&gt; one. On the other hand, if only perpendicular component of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; exists, the force made by &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; can be cancelled out by other forces (like normal force).&lt;&#x2F;p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;All the charges reside on the surface of the conductor under external &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt;. From the Gauss&#x27;s Law, we can define a Gaussian surface rigorousl inside the conductor (not including surface). For that surface:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\sum{}E_{\perp}\Delta{}A=\frac{Q_{enclosed}}{\varepsilon_{0}}&lt;&#x2F;script&gt;
+&lt;p&gt;since the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\sum{}\vec{E}&lt;&#x2F;script&gt; is &lt;script type=&quot;math&#x2F;tex&quot;&gt;0&lt;&#x2F;script&gt; inside conductor:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\sum{}E_{\perp}\Delta{}A=0=\frac{Q_{enclosed}}{\varepsilon_{0}}&lt;&#x2F;script&gt;
+&lt;p&gt;Therefore, &lt;script type=&quot;math&#x2F;tex&quot;&gt;Q_{enclosed}&lt;&#x2F;script&gt; equals to 0.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;guass-s-law&quot;&gt;Guass&#x27;s Law&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;deduction&quot;&gt;Deduction&lt;&#x2F;h3&gt;
+&lt;p&gt;First we define electric flux &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Phi_{E}&lt;&#x2F;script&gt; as:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\Phi_{E}=\vec{A}\cdot{}\vec{E}=EA\cos{\theta}=EA_{\perp{}}&lt;&#x2F;script&gt;
+&lt;p&gt;As &lt;a href=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;review-of-electrostatics-and-electromagnetism&#x2F;#rule2&quot;&gt;second rule of EFL&lt;&#x2F;a&gt; stated, &lt;script type=&quot;math&#x2F;tex&quot;&gt;E\propto{}\frac{N}{A_{\perp{}}}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Thus, &lt;script type=&quot;math&#x2F;tex&quot;&gt;EA_{\perp{}}=\Phi_{E}\propto{}N&lt;&#x2F;script&gt;. And since &lt;script type=&quot;math&#x2F;tex&quot;&gt;Q_{enclosed}\propto{}N&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;Q_{enclosed}\propto{}\Phi_{E}&lt;&#x2F;script&gt;. So for a enclosed surface in the space (we choose &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{1}{\varepsilon_{0}}&lt;&#x2F;script&gt; as the constant of proportionality),&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\sum{}E_{\perp}\Delta{}A=\frac{Q_{enclosed}}{\varepsilon_{0}}&lt;&#x2F;script&gt;
+&lt;p&gt;If we choose symmetric Gaussian surface, we could rewrite,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\sum{}E_{\perp}\Delta{}A=E_{\perp}\sum{}\Delta{}A&lt;&#x2F;script&gt;
+&lt;p&gt;since &lt;script type=&quot;math&#x2F;tex&quot;&gt;E_{\perp}&lt;&#x2F;script&gt; should remain constant in every angle.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;electric-potential-energy-and-potential&quot;&gt;Electric Potential Energy and Potential&lt;&#x2F;h2&gt;
+&lt;p&gt;Suppose there is situation that one charge is being moved from point &lt;script type=&quot;math&#x2F;tex&quot;&gt;a&lt;&#x2F;script&gt; to &lt;script type=&quot;math&#x2F;tex&quot;&gt;b&lt;&#x2F;script&gt; under uniform&lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; (Uniform electric field)&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+    \because{}&amp;W_{C}=-\Delta{}\text{PE}=-q(V_{b}-V_{a})=-qV_{ba}=Fd=qEd\\
+	\therefore{}&amp;E=-\frac{V_{ba}}{d}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; points in the direction of decreasing &lt;script type=&quot;math&#x2F;tex&quot;&gt;V_{ba}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;By using Calculus, we can deduce the electric potential at point in the space due to point charge is: (&lt;script type=&quot;math&#x2F;tex&quot;&gt;V&lt;&#x2F;script&gt; approaches 0 as r approaches infinity, plug sign in)&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;V=k\frac{Q}{r}&lt;&#x2F;script&gt;
+&lt;h2 id=&quot;capacitance-and-dielectrics&quot;&gt;Capacitance and Dielectrics&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;capacitance&quot;&gt;Capacitance&lt;&#x2F;h3&gt;
+&lt;p&gt;Capacitance is a device that can store electric charge, consists of two conductors (plates).
+The charge required by each plate is:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;Q=CV&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;V&lt;&#x2F;script&gt; is the potential difference between plates. Here we will deduce the capacitance&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;C&lt;&#x2F;script&gt; from the Gauss&#x27;s Law.
+&lt;p&gt;We choose the surface around the positive charged plate as our Gaussian surface. The Right-hand-side of the Guass&#x27;s Law, which is &lt;script type=&quot;math&#x2F;tex&quot;&gt;\sum{}E_{\perp}\Delta{}A&lt;&#x2F;script&gt; would be &lt;script type=&quot;math&#x2F;tex&quot;&gt;E_{\perp}\sum\Delta{}A&lt;&#x2F;script&gt; since the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; is uniform. Also, we only have one side of the plates to emit the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt;. Thus, after all, the &lt;script type=&quot;math&#x2F;tex&quot;&gt;E_{\perp}\sum\Delta{}A=EA\cos{\theta}&lt;&#x2F;script&gt; where the &lt;script type=&quot;math&#x2F;tex&quot;&gt;A&lt;&#x2F;script&gt; is the area of one side of the plate. And furthermore, the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{E}&lt;&#x2F;script&gt; is perpendicular to the surface area, hence,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;E=\frac{Q}{A\varepsilon_{0}}&lt;&#x2F;script&gt;
+&lt;p&gt;We also have,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\tag{V&gt;0}E=\frac{V}{d}&lt;&#x2F;script&gt;
+&lt;p&gt;In all,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\tag{V&gt;0}\begin{aligned}
+    \because{}\frac{V}{d}&amp;=\frac{Q}{A\varepsilon_{0}} \\
+    \therefore{}Q&amp;=\frac{A\varepsilon_{0}}{d}V\\
+    \therefore{}C&amp;=\frac{A\varepsilon_{0}}{d}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;The unit of capacitance &lt;script type=&quot;math&#x2F;tex&quot;&gt;C&lt;&#x2F;script&gt; is &lt;script type=&quot;math&#x2F;tex&quot;&gt;\text{F}&lt;&#x2F;script&gt;. &lt;script type=&quot;math&#x2F;tex&quot;&gt;\text{F}=\frac{\text{C}^{2}}{\text{N}\cdot{}\text{m}}=\frac{\text{A}^{2}\cdot{}\text{s}^{2}}{\text{N}\cdot{}\text{m}}=\frac{\text{A}^{2}\cdot{}\text{s}^{4}}{\text{kg}\cdot{}\text{m}^{2}}&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;dielectrics&quot;&gt;Dielectrics&lt;&#x2F;h3&gt;
+&lt;p&gt;Also there is one kind of materials that has multiple enhancements for capacitance. It&#x27;s called Dielectrics which is between the conductors (plates). &lt;&#x2F;p&gt;
+&lt;p&gt;Typically, it has three benefits for capacitance:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Two plates can be applied by high enough voltage without breaking down.&lt;&#x2F;li&gt;
+&lt;li&gt;Conductors can be put close enough without touching each other.&lt;&#x2F;li&gt;
+&lt;li&gt;Amplify capacitance by constant &lt;script type=&quot;math&#x2F;tex&quot;&gt;K&lt;&#x2F;script&gt;, which means &lt;script type=&quot;math&#x2F;tex&quot;&gt;C=K\varepsilon_{0}\frac{A}{d}&lt;&#x2F;script&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;energy-stored-in-capacitance&quot;&gt;Energy stored in capacitance.&lt;&#x2F;h3&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\text{W}_{\text{NC}}=qV_{ba}=\frac{1}{2}QV=\frac{1}{2}CV=\frac{Q^{2}}{2C}&lt;&#x2F;script&gt;
+&lt;h1 id=&quot;electric-circuit&quot;&gt;Electric Circuit&lt;&#x2F;h1&gt;
+&lt;p&gt;Here I omit some easy knowledge. So we first start with alternating
+current.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;alternating-current&quot;&gt;Alternating Current&lt;&#x2F;h2&gt;
+&lt;p&gt;For an alternating current system,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;V=V_{0}\sin{2\pi{}ft}=V_{0}\sin{\omega{}t}&lt;&#x2F;script&gt;
+&lt;p&gt;Therefore,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;I=\frac{V}{R}=\frac{V_{0}\sin{\omega{}t}}{R}=I_{0}\sin{\omega{}t}&lt;&#x2F;script&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;P=I^{2}R=I^{2}_{0}R\sin^{2}{\omega{}t}&lt;&#x2F;script&gt;
+&lt;p&gt;From the Calculus, we can know that &lt;script type=&quot;math&#x2F;tex&quot;&gt;\overline{\sin^{2}{x}}=\frac{1}{2}&lt;&#x2F;script&gt;. Thus,&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\overline{P}=\frac{1}{2}I_{0}^{2}R&lt;&#x2F;script&gt;
+&lt;p&gt;Also, the rms (root-mean-square) of both &lt;script type=&quot;math&#x2F;tex&quot;&gt;I&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;V&lt;&#x2F;script&gt; is very important.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;I_{rms}=\sqrt{\overline{I^{2}}}=\frac{I}{\sqrt{2}}&lt;&#x2F;script&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;V_{rms}=\sqrt{\overline{V^{2}}}=\frac{V}{\sqrt{2}}&lt;&#x2F;script&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\overline{P}=I_{rms}V_{rms}&lt;&#x2F;script&gt;
+&lt;h1 id=&quot;magnetism&quot;&gt;Magnetism&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;basics-of-magnetic-poles&quot;&gt;Basics of magnetic poles&lt;&#x2F;h2&gt;
+&lt;p&gt;Like the charges, there are also two types of poles (north and south). And they follow the rule of &lt;strong&gt;unlike poles attract, like poles repel&lt;&#x2F;strong&gt;. There is &lt;strong&gt;no&lt;&#x2F;strong&gt; single pole magnet until now.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ampere-s-law&quot;&gt;Ampere&#x27;s law&lt;&#x2F;h2&gt;
+&lt;p&gt;The law states that&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\sum{}B_{\|}\Delta{}\ell=\mu{}_{0}I_{enclosed}&lt;&#x2F;script&gt;
+&lt;p&gt;which means &amp;quot;Around a closed path, the sum of the component of the magnetic field tangent to the direction of the path equals &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mu{}_{0}&lt;&#x2F;script&gt; times the &lt;strong&gt;net&lt;&#x2F;strong&gt; current intercepted by the area within the path.&amp;quot;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;magnetic-field-current-and-force-because-of-it&quot;&gt;Magnetic field, current, and force because of it&lt;&#x2F;h2&gt;
+&lt;p&gt;Like electric field, magnets produce (induce) magnetic filed, which is denoted as &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{B}&lt;&#x2F;script&gt;. It is a vector and the unit of it is &lt;script type=&quot;math&#x2F;tex&quot;&gt;\text{T}&lt;&#x2F;script&gt;, tesla.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+   \text{T}&amp;=\frac{\text{kg}\cdot{}\text{m}\cdot{}\text{s}^{-2}}{\text{C}\cdot{}\text{m}\cdot{}\text{s}}\\
+   &amp;=\frac{\text{kg}}{\text{C}\cdot{}\text{s}}\\
+   &amp;=\frac{\text{kg}}{\text{A}\cdot{}\text{s}^{2}}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;It has been found that the electric current can produce electric field around it. The magnitude of it is deduced as below.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+    \sum{}B_{\|}\Delta{}\ell&amp;=\mu{}_{0}I_{enclosed}\\
+    B\cdot{}2\pi{}r&amp;=I\mu{}_{0}\\
+    B&amp;=\frac{\mu_{0}I}{2\pi{}r}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;The direction of the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{B}&lt;&#x2F;script&gt; follows the right hand rule 1 which is &amp;quot;use your right hand to grasp the current in the way that thumb points in the direction of current, the direction of rest of four fingers would be the direction&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;It has also been found that for the current-carrying wire under &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{B}&lt;&#x2F;script&gt;, the wire will be subjected to the force exerted by magnetic
+field.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\vec{F}=I\vec{\ell}\times{}\vec{B}&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{\ell}&lt;&#x2F;script&gt; is a vector whose magnitude is the length of the wire in the field and whose direction is the direction of the wire.&lt;&#x2F;p&gt;
+&lt;p&gt;The direction of the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{F}&lt;&#x2F;script&gt; follows the direction rule for the cross product of two vectors.&lt;&#x2F;p&gt;
+&lt;p&gt;The previous expression could also be used to deduce the force on charges under field.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+   I\vec{\ell}\times{}\vec{B}&amp;=\frac{nq}{t}\cdot{}\vec{v}t\times{}\vec{B}\\
+   &amp;=nq\vec{v}\times{}\vec{B}
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;In particular, for a single charge (n=1), it can be written in the manner that &lt;script type=&quot;math&#x2F;tex&quot;&gt;q\vec{v}\times{}\vec{B}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The magnitude of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{F}&lt;&#x2F;script&gt; would be &lt;script type=&quot;math&#x2F;tex&quot;&gt;nqvB\sin{\theta}&lt;&#x2F;script&gt;. And from here we can get the expression which defines the magnitude of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{B}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;B=\frac{F}{nqv\sin{\theta}}&lt;&#x2F;script&gt;
+&lt;h2 id=&quot;induced-emf&quot;&gt;Induced emf&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;magnetic-flux&quot;&gt;Magnetic flux&lt;&#x2F;h3&gt;
+&lt;p&gt;It has been found that the emf could be induced by a changing magnetic field. For quantitative analysis, we define magnetic flux &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Phi_{B}&lt;&#x2F;script&gt; similar to electric flux &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Phi_{E}&lt;&#x2F;script&gt;. (Direction of area could be chosen from either of the surfaces of the area &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{A}&lt;&#x2F;script&gt;. It doesn&#x27;t matter as long as it is consistent.)&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\Phi_{B}=\vec{B}\cdot{}\vec{A}&lt;&#x2F;script&gt;
+&lt;h3 id=&quot;faraday-s-law&quot;&gt;Faraday&#x27;s law&lt;&#x2F;h3&gt;
+&lt;p&gt;And according to the Faraday&#x27;s law, at any given time &lt;script type=&quot;math&#x2F;tex&quot;&gt;t&lt;&#x2F;script&gt;, the induced emf is equal to the instantaneous rate of change of &lt;strong&gt;magnetic flux through the area inside made by closed circuit&lt;&#x2F;strong&gt;. Here we express magnetic flux inside as a function of &lt;script type=&quot;math&#x2F;tex&quot;&gt;t&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\Phi_{B}^{inside}=a(t)&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\mathcal{E}=-N\frac{d}{dt}a(t)&lt;&#x2F;script&gt;
+&lt;p&gt;where &lt;script type=&quot;math&#x2F;tex&quot;&gt;N&lt;&#x2F;script&gt; is the number of the turn of the circuit.&lt;&#x2F;p&gt;
+&lt;p&gt;Here I have to use the derivative form of the Faraday&#x27;s law cause it&#x27;s vital to express it as &lt;em&gt;instantaneous&lt;&#x2F;em&gt; rate of change.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;ac-generator&quot;&gt;AC Generator&lt;&#x2F;h4&gt;
+&lt;p&gt;And we can continue to do some work on the equation above if we are analyzing the AC generator. Since the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{E}&lt;&#x2F;script&gt; is
+changing continuously, we can rewrite &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{E}&lt;&#x2F;script&gt; in the form of a function. Suppose the area &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{A}&lt;&#x2F;script&gt; that is formed by the circuit, orients the east direction at the beginning. And the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{B}&lt;&#x2F;script&gt; is uniform and parallel along the horizontal axis in the space. So at any given time &lt;script type=&quot;math&#x2F;tex&quot;&gt;t&lt;&#x2F;script&gt;, the angle that is made by the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{A}&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{B}&lt;&#x2F;script&gt; is &lt;script type=&quot;math&#x2F;tex&quot;&gt;\theta{}=\omega{}t&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Thus:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\Phi_{B}=a(t)=BA\cos{\omega{}t}&lt;&#x2F;script&gt;
+&lt;p&gt;For the sake of discussion, we set &lt;script type=&quot;math&#x2F;tex&quot;&gt;N=1&lt;&#x2F;script&gt;, so the Faraday&#x27;s law under this scenario would be:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\mathcal{E}=-\frac{d}{dt}a(t)=-\frac{d}{dt}BA\cos{\omega{}t}=\omega{}BA\sin{\omega{}t}&lt;&#x2F;script&gt;
+&lt;p&gt;Or, in terms of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\theta&lt;&#x2F;script&gt;:&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\mathcal{E}=\omega{}BA\sin{\theta{}}&lt;&#x2F;script&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;review-of-electrostatics-and-electromagnetism&#x2F;ac-generator.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Above is the graph of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\sin{\theta}&lt;&#x2F;script&gt;. And we can spot out that the sign of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{E}&lt;&#x2F;script&gt; changes every &lt;script type=&quot;math&#x2F;tex&quot;&gt;\pi{}&lt;&#x2F;script&gt;, which means the direction of current in the circuit changes every half revolution. Also, we can see that the current is at its peak when&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\theta{}\in{} \{\frac{\pi}{2}k:k=2x+1,x\in{}\Z \}&lt;&#x2F;script&gt;
+&lt;p&gt;And the conclusion above also holds for different situations in which circuit kicks off in different positions.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-direction-of-the-current-induced-by-changing-magnetic-field&quot;&gt;The direction of the current induced by changing magnetic field.&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;No Lenz&#x27;s Law needed!&lt;&#x2F;strong&gt; It is possible to determine the direction of emf or current without using Lenz&#x27;s law. The only thing you need is to use the so-called &amp;quot;Left hand rule of Faraday&#x27;s law&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Point your left hand&#x27;s thumb in the direction of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\vec{A}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If the sign of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\frac{d}{dt}a(t)&lt;&#x2F;script&gt; is positive (&lt;strong&gt;WITHOUT MINUS SIGN AHEAD!&lt;&#x2F;strong&gt;), then the direction of your rest four fingers is the direction
+of the current.&lt;&#x2F;p&gt;
+&lt;p&gt;If the sign of it is negative, then the direction of the current of the circuit would be in the opposite direction of your rest four fingers.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Abstract Algebra Learning Log - Preliminaries</title>
+		<published>2019-12-10T00:00:00+00:00</published>
+		<updated>2019-12-10T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/abstract-algebra-learning-log-preliminaries/" type="text/html"/>
+		<id>https://lexuge.github.io/abstract-algebra-learning-log-preliminaries/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Recently, I have been working on &lt;em&gt;Abstract Algebra&lt;&#x2F;em&gt; which has derived category theory and exposes its strong relation with computer science.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;brief-introduction&quot;&gt;Brief Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;All these learning logs will be based on one online and free textbook (2019 Version), naming &lt;a href=&quot;http:&#x2F;&#x2F;abstract.ups.edu&#x2F;&quot;&gt;&lt;em&gt;Abstract Algebra&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; which is licensed under the GNU FDL.&lt;&#x2F;p&gt;
+&lt;p&gt;This learning log is basically in two parts, one is my own understandings or complementions to some of the parts, another part is my own answers to part of the &lt;em&gt;Exercises&lt;&#x2F;em&gt; section in the end of the chapter. And succeeding learning logs will mainly based on this form too.&lt;&#x2F;p&gt;
+&lt;p&gt;First part may contain works in the textbook itself, therefore, this series of posts is licensed under the GNU FDL either.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;Example&quot;&gt;Understandings and complementions to textbook&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;page-6-proof-of-de-mogran-s-laws&quot;&gt;Page 6, Proof of De Mogran&#x27;s Laws&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;script type=&quot;math&#x2F;tex&quot;&gt;(A\cup{}B)&#x27;=A&#x27;\cap{}B&#x27;&lt;&#x2F;script&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;We define two statements, &lt;script type=&quot;math&#x2F;tex&quot;&gt;p&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;q&lt;&#x2F;script&gt;, representing &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\in{}A&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\in{}B&lt;&#x2F;script&gt; respectively.
+statement &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\in{}(A\cup{}B)&#x27;\Leftrightarrow{}\neg{}(p\lor{}q)\Leftrightarrow{}(\neg{}p\land{}\neg{}q)\Leftrightarrow{}x\in{}(A&#x27;\cup{}B&#x27;)&lt;&#x2F;script&gt;. (The relation between &lt;script type=&quot;math&#x2F;tex&quot;&gt;\neg{}(p\lor{}q)&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;(\neg{}p\land{}\neg{}q)&lt;&#x2F;script&gt; can be deduced by simply enumerating through all the possible values of &lt;script type=&quot;math&#x2F;tex&quot;&gt;p&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;q&lt;&#x2F;script&gt;, e.g. &lt;script type=&quot;math&#x2F;tex&quot;&gt;true&lt;&#x2F;script&gt; or &lt;script type=&quot;math&#x2F;tex&quot;&gt;false&lt;&#x2F;script&gt; for statements).
+Thus, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\forall{}x\in{}(A\cup{}B)&#x27;\rArr{}x\in{}(A&#x27;\cap{}B&#x27;)\rArr{}(A\cup{}B)&#x27;\supset{}A&#x27;\cap{}B&#x27;&lt;&#x2F;script&gt;. Conversely, we can prove &lt;script type=&quot;math&#x2F;tex&quot;&gt;(A\cup{}B)&#x27;\subset{}A&#x27;\cap{}B&#x27;&lt;&#x2F;script&gt;.
+Therefore, &lt;script type=&quot;math&#x2F;tex&quot;&gt;(A\cup{}B)&#x27;=A&#x27;\cap{}B&#x27;&lt;&#x2F;script&gt;. &lt;script type=&quot;math&#x2F;tex&quot;&gt;\square{}&lt;&#x2F;script&gt;
+2. &lt;script type=&quot;math&#x2F;tex&quot;&gt;(A\cap{}B)&#x27;=A&#x27;\cup{}B&#x27;&lt;&#x2F;script&gt;
+Similarly, we can deduce it by using proposition logic. &lt;script type=&quot;math&#x2F;tex&quot;&gt;\square{}&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;\blacksquare{}&lt;&#x2F;script&gt;
+&lt;h2 id=&quot;page-12-proof-of-implications-between-partition-and-relation&quot;&gt;Page 12, Proof of implications between partition and relation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;theorem&quot;&gt;Theorem&lt;&#x2F;h3&gt;
+&lt;p&gt;Given an equivalence relation &lt;script type=&quot;math&#x2F;tex&quot;&gt;\thicksim{}&lt;&#x2F;script&gt; on a set &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt;, the equivalence classes of &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt; form a partition of &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt;, then there is an equivalence relation on &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt; with equivalence classes &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt;. Conversely, if &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{P}={x_{i}}&lt;&#x2F;script&gt; partition of a set &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt;, then there is an equivalence relation on &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt; with equivalence classes &lt;script type=&quot;math&#x2F;tex&quot;&gt;X_{i}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;proof&quot;&gt;Proof&lt;&#x2F;h3&gt;
+&lt;p&gt;By using the reflective property, we have &lt;script type=&quot;math&#x2F;tex&quot;&gt;\forall{}x\in{}X, x\thicksim{}x&lt;&#x2F;script&gt;. Thus, &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\thicksim{}[x]&lt;&#x2F;script&gt; by the definition of the equivalence class. Therefore, the &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x] \not= \empty&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Thus, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\bigcup_{x\in{}X}[x]&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, we should show &lt;script type=&quot;math&#x2F;tex&quot;&gt;\forall{}x,y\in{}X&lt;&#x2F;script&gt;, either &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]\cap{}[y]=\empty{}&lt;&#x2F;script&gt; or &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]=[y]&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]\cap{}[y]\not = \empty&lt;&#x2F;script&gt;, Then, &lt;script type=&quot;math&#x2F;tex&quot;&gt;\forall{}c\in{}[y], c\thicksim{}y&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+\because{}&amp;x\thicksim{}y\\
+\therefore{}&amp;y\thicksim{}x\\
+\therefore{}&amp;c\thicksim{}x\\
+\therefore{}&amp;c\in{}[x]\\
+\therefore{}&amp;[y]\subset{}[x]\\
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;p&gt;Conversely, we can also show &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]\subset{}[y]&lt;&#x2F;script&gt; in the same way. Thus, the &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;[y]&lt;&#x2F;script&gt; are either disjoint or completely the same. &lt;script type=&quot;math&#x2F;tex&quot;&gt;\square&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Now we need to show that given a partion on &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt;, we can construct a relation &lt;script type=&quot;math&#x2F;tex&quot;&gt;\thicksim&lt;&#x2F;script&gt; on &lt;script type=&quot;math&#x2F;tex&quot;&gt;X&lt;&#x2F;script&gt; such that partion &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{P}&lt;&#x2F;script&gt; is the equivalence classes of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\thicksim{}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose we have a relation &lt;script type=&quot;math&#x2F;tex&quot;&gt;\thicksim&lt;&#x2F;script&gt;. We define &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\thicksim{}y\Leftrightarrow{}x\ and\ y\ are\ in\ the\ same\ part\ x_{i}\ of\ partition\ \mathcal{P}&lt;&#x2F;script&gt;. So we should show that the relation is equivalent.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Reflectivity
+since &lt;script type=&quot;math&#x2F;tex&quot;&gt;\forall{}x\in{}X&lt;&#x2F;script&gt;, &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; will be in the same &lt;script type=&quot;math&#x2F;tex&quot;&gt;x_{i}&lt;&#x2F;script&gt; as itself does, so it is trivial to prove.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Symmetry&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;x\thicksim{}y\Leftrightarrow{}x\ and\ y\ are\ in\ the\ same\ part\ x_{i}\ of\ partition\ \mathcal{P}\Leftrightarrow{}y\thicksim{}x&lt;&#x2F;script&gt;, since the order doesn\&#x27;t matter.
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Transitivity
+If &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\thicksim{}y&lt;&#x2F;script&gt;, then &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;y&lt;&#x2F;script&gt; are in the same part. If &lt;script type=&quot;math&#x2F;tex&quot;&gt;y\thicksim{}z&lt;&#x2F;script&gt;, than &lt;script type=&quot;math&#x2F;tex&quot;&gt;z&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;y&lt;&#x2F;script&gt; are in the same part. Thus &lt;script type=&quot;math&#x2F;tex&quot;&gt;x&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;z&lt;&#x2F;script&gt; are in the same part, which is &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\thicksim{}z&lt;&#x2F;script&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Thus relation &lt;script type=&quot;math&#x2F;tex&quot;&gt;\thicksim{}&lt;&#x2F;script&gt; is equivalence relation. Since no element can be both in two parts, &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]\cap{}[y]=\empty&lt;&#x2F;script&gt; where &lt;script type=&quot;math&#x2F;tex&quot;&gt;x,y\in{}X&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Now we need to prove the set of equivalence classes is the same as partition &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{P}&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If there is &lt;script type=&quot;math&#x2F;tex&quot;&gt;[x]\not = x_{i}&lt;&#x2F;script&gt; where &lt;script type=&quot;math&#x2F;tex&quot;&gt;x\in{}x_{i}&lt;&#x2F;script&gt;, then there must be some &lt;script type=&quot;math&#x2F;tex&quot;&gt;y\in{}x_{i}&lt;&#x2F;script&gt; in other equivalence class or &lt;script type=&quot;math&#x2F;tex&quot;&gt;y\in{}[x]&lt;&#x2F;script&gt; in other part of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{P}&lt;&#x2F;script&gt;. Both of which above have contradicted the definition of &lt;script type=&quot;math&#x2F;tex&quot;&gt;\thicksim{}&lt;&#x2F;script&gt;. And the &lt;script type=&quot;math&#x2F;tex&quot;&gt;\mathcal{P}&lt;&#x2F;script&gt; will be the same as the set of equivalence classes. &lt;script type=&quot;math&#x2F;tex&quot;&gt;\square&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;\blacksquare&lt;&#x2F;script&gt;
+&lt;h1 id=&quot;my-answers-to-part-of-exercises-section-1-3&quot;&gt;My Answers to part of &lt;em&gt;Exercises&lt;&#x2F;em&gt; section &lt;script type=&quot;math&#x2F;tex&quot;&gt;1.3&lt;&#x2F;script&gt;.&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: this part is my own work to the section, thus no guarantees is provided in terms of correctness. You may use it neither as instruction or correct answer&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;general-solution-to-problems-4-thicksim-16-except-8-and-12&quot;&gt;General solution to problems &lt;script type=&quot;math&#x2F;tex&quot;&gt;4\thicksim{}16&lt;&#x2F;script&gt; except &lt;script type=&quot;math&#x2F;tex&quot;&gt;8&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;12&lt;&#x2F;script&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;All the proof-based problems involving the equality of operation of set theory (limited to union and intersect only) can be proved by transforming both sides into statements and enumerating through all the possible values of single statements, which construct the left-hand-side or right-hand-side statement, to show that set on each side is a subset of the other. For example, &lt;a href=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;abstract-algebra-learning-log-preliminaries&#x2F;#Example&quot;&gt;Proof of De Morgan&#x27;s laws&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;problem-12&quot;&gt;Problem 12&lt;&#x2F;h2&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+  (A\cup{}B)\times{}C&amp;=\{(a,b):a\in{}(A\cup{}B),\ b\in{}C\}\\
+  &amp;=\{(a,b):a\in{}A\ or\ a\in{}B,\ b\in{}C\}\\
+  &amp;=\{(a,b):a\in{}A,\ b\in{}C\}\cup{}\{(a,b):a\in{}B,\ b\in{}C\}\\
+  &amp;=(A\times{}C)\cup{}(B\times{}C)\\
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;\blacksquare&lt;&#x2F;script&gt;
+&lt;h2 id=&quot;problem-17&quot;&gt;Problem 17&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to let &lt;script type=&quot;math&#x2F;tex&quot;&gt;f&lt;&#x2F;script&gt; be a mapping which is well-defined, we need to make sure that &lt;script type=&quot;math&#x2F;tex&quot;&gt;f(\frac{kp}{kq})=f(\frac{p}{q})&lt;&#x2F;script&gt; where &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\in{}\Z&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;k\not = 0&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only if &lt;script type=&quot;math&#x2F;tex&quot;&gt;kp=q&lt;&#x2F;script&gt; implies the above implication. Thus it isn&#x27;t a mapping&lt;&#x2F;li&gt;
+&lt;li&gt;It is a mapping since it fulfills the requirement above.&lt;&#x2F;li&gt;
+&lt;li&gt;Only if &lt;script type=&quot;math&#x2F;tex&quot;&gt;p=q&lt;&#x2F;script&gt; or &lt;script type=&quot;math&#x2F;tex&quot;&gt;k=1&lt;&#x2F;script&gt;. Not a mapping.&lt;&#x2F;li&gt;
+&lt;li&gt;It is a mapping.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;problem-22&quot;&gt;Problem 22&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;(d)&lt;&#x2F;em&gt; We have to show that &lt;script type=&quot;math&#x2F;tex&quot;&gt;g(a)=g(b)\rArr{}a=b&lt;&#x2F;script&gt; in order to prove that &lt;script type=&quot;math&#x2F;tex&quot;&gt;g&lt;&#x2F;script&gt; is one-to-one. Suppose &lt;script type=&quot;math&#x2F;tex&quot;&gt;g(a)=g(b)&lt;&#x2F;script&gt;. Since &lt;script type=&quot;math&#x2F;tex&quot;&gt;f&lt;&#x2F;script&gt; is onto, there exists such &lt;script type=&quot;math&#x2F;tex&quot;&gt;a&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;b&lt;&#x2F;script&gt; that &lt;script type=&quot;math&#x2F;tex&quot;&gt;a=f(\alpha{})&lt;&#x2F;script&gt; and &lt;script type=&quot;math&#x2F;tex&quot;&gt;b=f(\beta{})&lt;&#x2F;script&gt;. So &lt;script type=&quot;math&#x2F;tex&quot;&gt;g(a)=g(b)&lt;&#x2F;script&gt; can be written as &lt;script type=&quot;math&#x2F;tex&quot;&gt;g(f(\alpha))=g(f(\beta))&lt;&#x2F;script&gt;. Given &lt;script type=&quot;math&#x2F;tex&quot;&gt;g\circ{}f&lt;&#x2F;script&gt; is one-to-one, we know that &lt;script type=&quot;math&#x2F;tex&quot;&gt;\alpha{}=\beta{}&lt;&#x2F;script&gt;. Thus &lt;script type=&quot;math&#x2F;tex&quot;&gt;a=f(\alpha{})=f(\beta{})=b&lt;&#x2F;script&gt;, resulting in &lt;script type=&quot;math&#x2F;tex&quot;&gt;g(a)=g(b)\rArr{}a=b&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;\blacksquare{}&lt;&#x2F;script&gt;
+&lt;p&gt;&lt;em&gt;(e)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex;mode=display&quot;&gt;\begin{aligned}
+\forall{}&amp;b\in{}B,g(b)\in{}C\\
+\because{}&amp;(g\circ{}f)\ is\ onto\\
+\therefore{}&amp;\exist{}a:g(b)=(g\circ{}f)(a)=g(f(a))\\
+\because{}&amp;g\ is\ one\text{-}to\text{-}one\\
+\therefore{}&amp;\forall{}b\in{}B,b=f(a)
+\end{aligned}&lt;&#x2F;script&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;\blacksquare{}&lt;&#x2F;script&gt;
+&lt;h2 id=&quot;problem-28&quot;&gt;Problem 28&lt;&#x2F;h2&gt;
+&lt;p&gt;Suppose there is a element &lt;script type=&quot;math&#x2F;tex&quot;&gt;z\in{}X&lt;&#x2F;script&gt; such that &lt;script type=&quot;math&#x2F;tex&quot;&gt;z&lt;&#x2F;script&gt; is not related to anything. Then transitivity and symmetry hold but reflective holds since we need to have &lt;script type=&quot;math&#x2F;tex&quot;&gt;(x,x)\in{}R,\forall{}x\in{}X&lt;&#x2F;script&gt;.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;\blacksquare&lt;&#x2F;script&gt;
+&lt;p&gt;Other parts I find not worth sharing or taking notes.&lt;&#x2F;p&gt;
+&lt;script type=&quot;math&#x2F;tex&quot;&gt;24.(b),\ 24.(c),\ 24.(d),\ 24.(e)&lt;&#x2F;script&gt; remain unsolved.
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;p&gt;I would prefer a quick and informal one rather than a formal one.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;abstract.ups.edu&#x2F;&quot;&gt;&lt;em&gt;Abstract Algebra&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;cheatatmathhomework&#x2F;comments&#x2F;3ymxjp&#x2F;equivalence_class_question_abstract_algebra&#x2F;&quot;&gt;Equivalence Class Question - Reddit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;special-thanks&quot;&gt;Special thanks&lt;&#x2F;h1&gt;
+&lt;p&gt;My math teacher.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Beyond Boarder - A trip to Tokyo</title>
+		<published>2019-08-18T00:00:00+00:00</published>
+		<updated>2019-08-18T00:00:00+00:00</updated>
+		<link href="https://lexuge.github.io/beyond-boarder-a-trip-to-tokyo/" type="text/html"/>
+		<id>https://lexuge.github.io/beyond-boarder-a-trip-to-tokyo/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;As the first time to go abroad, I go to the Tokyo which is one of the
+mega cities in Asia. I hereby write down what have been shown in
+Journey and something more.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;day-1&quot;&gt;Day 1&lt;&#x2F;h1&gt;
+&lt;p&gt;It&#x27;s August 18^th^ the first day of the journey. I was a kind of
+excited in the morning before boarding because this journey would be my
+first trip abroad in combination of the first trip I would take alone.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;first-touch&quot;&gt;First touch&lt;&#x2F;h2&gt;
+&lt;p&gt;At 11:50 AM (UTC+8), I took off and I landed in NRT
+International Airport in Tokyo at 4:30 PM (UTC+9). At the process of
+custom declaration, I found out that the fact that many elders were
+still on their position of work, which reflected the ageing. I had no
+photo here because of the prohibition of taking photo in Japan custom.&lt;br &#x2F;&gt;
+The subway system annoyed me a little bit for the first time. They have
+different types of train like Local, Limited Express, Commuter Express
+and so on. The difference between these types is the number of stops.
+And since the subway system is privatized, many different companies had
+involved in it, giving you a confusing fact that why some lines cannot
+transfer to another line.&lt;br &#x2F;&gt;
+After taking a long way of subway from NRT to my residential, I ate the
+Sukiya around it. Somehow, it was delicious anyway because I had took a
+long ride of subway from NRT the place far away from the residential
+although it isn&#x27;t in the downtown also. The place in which my
+residential is gave me a sense of mixture of retro and progressive.
+Building&#x27;s in the town are quite old since they are in the style of
+80s. However, in the relatively speaking downtown area in that town, the
+area around the subway station which is also very old-fashion like, they
+have got all kind of stores that they need actually with the guaranteed
+service because almost all of them are chain stores. Step into the old
+buildings, you can find a sense of neat which is also scattered at
+everywhere in the city. That was my first sense to tokyo since I had not
+got to the downtown actually.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tokyo-ignitions&quot;&gt;Tokyo Ignitions&lt;&#x2F;h2&gt;
+&lt;p&gt;In the first night, I went to the Tokyo Metropolitan Government Building
+Observatory alone by riding the Shinjuku line to the Shinjuku station.
+Station of Shinjuku is quite big and you may lost in it since it have
+got 6 floors and countless entries and exits.&lt;br &#x2F;&gt;
+The observatory is at floor 45 and free for everyone. Many foreigners in
+it since it is the almost best place to gaze afar in Tokyo. I came it in
+the night, so I had got some night scenes:&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD1-1.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD1-2.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD1-3.JPG&quot; alt=&quot;&quot; &#x2F;&gt; Not very sharp since I had
+not got a tripod.&lt;br &#x2F;&gt;
+After taking photo, I hung out in Shinjuku for about 1 hour and came
+back to residential at 10:40 PM.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;day-2&quot;&gt;Day 2&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I have got the sense of living here.&lt;br &#x2F;&gt;
+People not stirve to competition,&lt;br &#x2F;&gt;
+But setting higher standards,&lt;br &#x2F;&gt;
+Taking the right order and proceeding on.&lt;br &#x2F;&gt;
+-- Tokyo Metro staff, Making Tokyo Moving&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;beginning-of-the-day&quot;&gt;Beginning of the day&lt;&#x2F;h2&gt;
+&lt;p&gt;I awoke at 6:30 PM. It was a great day of experience of local life in
+Tokyo. With unamed flavor of fragmance scattered in air, I went to the
+7-Eleven store which laid one blocks away from my residential to buy my
+breakfirst for today. I bought a sandwhich and a bottle of medium size
+milk. Guess what? They have costed me JPY 500 with which I can have a
+lunch well done in UTokyo (I will mention it later).&lt;br &#x2F;&gt;
+After a quick-charge, I got onto the road to start today&#x27;s Journey
+which is taking Metro to the Tokyo National Museum and all the other
+museums around here, taking Metro again to the Ginza and visiting
+Intermediatheque, finally obtaining the ticket of Imperial Palace tour.
+Everything went on quickly and normally, I bought the one-day pass for
+both TOEI and Tokyo Metro so I can easily do unlimited transfer and take
+the metros in all the lines which are operated by these two companies.
+With the instructions and tutorials from Google Maps, I sought the way
+out quickly and took turns in intricate ways. However and most
+importantly, &lt;strong&gt;all the museums were closed today since it was Monday.&lt;&#x2F;strong&gt;
+Well, you can guess what I felt after walking about 3 km but found all
+of them were closed.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-university-of-tokyo&quot;&gt;The university of Tokyo&lt;&#x2F;h2&gt;
+&lt;p&gt;In addition to the bad luck of having wrong
+day to visit the museums, It began to rain quickly. I had nothing to say
+but thinking this morning had been spoiled. Shooting the dice, I went to
+the University of Tokyo near here to see if anything can be found. Well,
+it is said that &lt;em&gt;Authorized Staff or Invited Visitors only&lt;&#x2F;em&gt; on the gate.
+However, after a while of hesitation, I stepped in this rust gate,
+throwing all the cautions to the winds. As I walked on the lanes, no
+visitors at all. All people in sight were undergraduate students,
+graduate students in combination of professors and staff like janitors
+and deans. A kind of embarrassment, right? I shot as walk, here are some
+pictures:&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-1.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-2.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+From my perception, UTokyo is a western university in eastern
+hemisphere. All the western like projects, associations, institutions
+and clubs can all be found in UTokyo which is a top university in both
+Asia and the world. In UTokyo, you can join the lectures which are held
+by other worldwide top universities such as UChicago, UCLA or UC
+Berkeley. As I saw, there was one poster right on the bulletin board and
+several pamphlets announced such a lecture.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;great-university-by-great-cafeteria&quot;&gt;Great university by great cafeteria!&lt;&#x2F;h2&gt;
+&lt;p&gt;The presence of great
+cafeterias inside the campus is one of the most crucial prerequisites
+for becoming a great university (kidding). There was no exception for
+UTokyo either. I bought some exclusive stationary with slogan of UTokyo
+on them in campus shop and got into the central cafeteria of UTokyo.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-8.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+Dishes on the menus were very cheap, because of the absence of Rimen, I
+chose the medium size Miso Rimen (actually quite big) in combination of
+mashed potato salad. Two of them for JPY 490 only!&lt;br &#x2F;&gt;
+Unusual experience of having lunch surrounded by a bunch of university
+students and professors. Like it!&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-9.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+One anecdote in cafeteria is that I went to the cashier 3 without
+noticing the &#x27;no cash&#x27; sign in front of it. However, when I was trying
+the bill, the attendant asked me to swipe the card to pay. There was
+only one idea stroke my mind: I have to use student card which I&#x27;m not
+eligible to have to pay. After conversing with her, I realized my
+negligence of &#x27;no cash&#x27; sign and went to the cashier 1 instead.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ginza&quot;&gt;Ginza&lt;&#x2F;h2&gt;
+&lt;p&gt;Few of us will deny that Ginza district in a sense is the heart or the
+Tokyo and a symbol of prosperity of Tokyo.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-4.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+Therefore, I went to the Ginza and hung out in a little part of it for
+an afternoon. I went to the Apple Ginza firstly. Without doubt, it is
+elegant in almost every aspects and I also found the Apple TV which was
+not allowed to sell in mainland China.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-5.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+Anyway, I didn&#x27;t buy anything in Apple Store because it is also
+expansive in almost every aspects.&lt;br &#x2F;&gt;
+I also visited the world biggest UNIQLO which has 11 floors and a lots
+of exclusive products.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-3.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+I got around all the floors but somehow bought nothing since I was not
+interested in apparels at all.&lt;br &#x2F;&gt;
+And finally, I went to the itoya which is a mega stationary store which
+has compounded almost everything related to the stationary and even
+more.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-6.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+I bought some pens and mechanical pencils. And that&#x27;s all.&lt;br &#x2F;&gt;
+After walking for whole afternoon, I went to a Starbucks near one
+crossing and purchased a cup of TEAVANA. Another anecdote here: I asked
+for lemonade flavor TEAVANA but the attendant just couldn&#x27;t understand.
+So I looked up the menu but found that although the items&#x27; name were
+annotated by English, the flavors weren&#x27;t. So he listed all the flavors
+one by one but somehow I just could not understand. In the end, I
+ordered a Grande cup of black tea TEAVANA but it turned out to comprise
+of black tea, ice cubes but no sugar or syrup.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD2-7.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;day-3&quot;&gt;Day 3&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;momat&quot;&gt;MOMAT&lt;&#x2F;h2&gt;
+&lt;p&gt;As I mentioned yesterday, I would go to the museums as a compensation
+for yesterday. The first museum that I chose as a destination is MOMAT
+(The national museum of modern art and craft), which later has been
+proved as a false move because I was just an idiot on the aspect of art,
+especially the abstract branch. After several gazes of ignorance, I laid
+on one chair in which I read the guide of tour. After finishing the
+reading of description of how to compliment and appreciate these
+abstract crafts varied in time and shape, I went to the next
+destination, thinking my morning had been spoiled again by wrong choice
+of destination. Actually, I had quite big prospect of enjoyment with
+MOMAT since it has been mentioned in Lonely Planet magazine as the first
+visiting spot for the Imperial Palace region.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-1.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;national-archives-of-japan&quot;&gt;National Archives of Japan&lt;&#x2F;h2&gt;
+&lt;p&gt;Anyway, I carried on to visit my next
+place in my list - intermediatheque by UTokyo. In the half-way, I saw
+the National Archives of Japan and visited it. It preserved a lots of
+rescript of promulgations. In the museum, you can find the contracts and
+laws which witnessed the developments of Japan&#x27;s politics and the big
+events in the history.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-2.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;intermediatheque&quot;&gt;Intermediatheque&lt;&#x2F;h2&gt;
+&lt;p&gt;It has exceeded my expectation definitely also.
+The intermediatheque comprises all the most valuable collections in UMUT
+(the Universal Museum of the University of Tokyo), telling you the story
+of the history by showing you the true ones but not replicas. As the
+director of UMUT said, the dated matters in the history strokes should
+never be forgotten. By visiting the museum, I came to a sense of
+stepping into the 19^th^ century. Taking photos was not allowed in
+museum in any forms, therefore, I have no photos but one of entry.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-3.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;strong&gt;*&lt;&#x2F;strong&gt; First Floor Inside the museum, on the first floor in
+intermediatheque (second floor in KITTE commercial complex), I saw a
+full sight of different kind of fossils and specimens of various kind of
+species, including reptiles, amphibians, insects, vertebrates,
+invertebrates, mammal and plants. They mainly came from the UMUT anatomy
+branch. They were not only the fossils and specimens but also the
+narrator of the history. Some of them were bought by professors of
+UTokyo for the purpose of researching while some of others were captured
+and framed by the students or professors themselves at Tokyo. You see
+not only the specimens themselves, but also the strokes in history that
+they have brushed. Then, I moved on to the next section in which I saw
+many different kind of artifacts and the productions which marked the
+highest standard and capability of the technologies in that time. For
+example, you can see one elevator that Albert Einstein once used in
+Tokyo university when he was visiting Japan to attend the conferences
+which were held in Tokyo university after he was awarded with the Nobel
+prize of Physics. On the rusty board of elevator, you can see through
+the history.&lt;br &#x2F;&gt;
+&lt;strong&gt;*&lt;&#x2F;strong&gt; Second Floor Then I went to the next floor in which many dated
+equipment and artifacts had been shown. In this section, you can see the
+history of UTokyo. My favorite collection is a set of sculptures for
+mathematics department. Of course not for depicting the professor. They
+were used for researching and teaching in the field which concentrates
+on the complex functions and surface because there was no computer
+simulation or plotting in 19^th^ or early 20^th^ century and the
+sculptures of the complex surface were needed since functions are just
+intricate. They were beautiful and interpreted the mathematics in an
+elegant way. There were also other collections for dynamics and
+mechanics physics, I will just skip these.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;hhkb-yes&quot;&gt;HHKB Yes!&lt;&#x2F;h2&gt;
+&lt;p&gt;After the great experience in intermediatheque, I went to
+the Bic Camera which is a big store compounds almost any electronics. I
+was interested by neither computers nor cellphones but accessories like&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;keyboards!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cowboys in the western United States leave their horses when they die.
+But never leave their saddles, regardless of how long they need to
+walk in the desert. Saddles are interfaces that are deeply adapted to
+our bodies whereas horses are consumable items. It should not be
+forgotten that computers are consumables nowadays, but keyboards are
+interfaces that we can use through our lives.&lt;br &#x2F;&gt;
+-- Eiiti Wada, Professor Emeritus at the University of Tokyo&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;HHKB (Happy Hacking Keyboard) is a kind of specialty of Japan among the
+programmers, developers and IT practitioners. I&#x27;m not the exception
+either. So I bought one HHKB Professional JP (PD-KB420W) since it was
+CNY 700 cheaper than the price of Professional 2 in China and the JP
+version is not provided in China.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-4.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-5.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;asakura-temple&quot;&gt;Asakura Temple&lt;&#x2F;h2&gt;
+&lt;p&gt;In the end, I went to the Asakura Temple which is a
+famous spot in Japan but not only a temple. I got a fortune stick. Here
+was what my stick said.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-6.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD3-7.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;day-4&quot;&gt;Day 4&lt;&#x2F;h1&gt;
+&lt;p&gt;On day 4, I went to the Tokyo National Museum in which there
+were a lot of national treasures and different types of collections
+which reflect the history of Japan. From these different culture
+heritages, I found out the Japanese culture was actually a combination
+of various Asian cultures such as Chinese culture, the Buddhism and the
+Korean culture. These culture composed the Japanese culture and exerted
+influence on it until meiji. The Chinese culture, of course, exerted its
+influence on Japanese culture mostly. From the collections which were
+created in Tang Dynasty, you can easily see the presences of Chinese
+figures, characters and stories even verses.&lt;br &#x2F;&gt;
+Buddhism had a very intriguing position in Japanese culture history of
+development. It was introduced to Japan at a very beginning time of
+Japanese history. The time of the Neolithic age even. Several kinds of
+sculpture of Buddhists were presented as the symbols of distributing of
+Buddhism in Neolithic age in Japan in the museum. Later it began to
+prosper again in Japan in the Edo period since the Buddhism became
+prestigious in Japan by the praising of the Tokugawa Shogunate.&lt;br &#x2F;&gt;
+You can also find many Chinese stories or characters in the museum as I
+mentioned above. They became a quite hot and predominant topics of both
+painting and writing in the period corresponding to the Tang Dynasty of
+China. Also, the photo taking is prohibited in the museum, thus I have
+no photos. What a sad.&lt;br &#x2F;&gt;
+In the afternoon, one tragedy came. My Wi-Fi ran out of battery thus I
+had disconnected from the whole world. It was a such a troublesomne
+problem that I had to solve it as soon as possible. I went to the Family
+Mart by finding the route on Google Maps by using the free Wi-Fi of the
+museum. Then I had no alternative but to bought a charging cable. It
+costed JPY 1000! What a horrible and terrifying story. Anyway, I got the
+Wi-Fi then.&lt;br &#x2F;&gt;
+After I solved the problem, I carried on to the Shinjuku Express Bus
+Terminal to buy a round ticket for my Mountain Fuji trip.&lt;br &#x2F;&gt;
+That&#x27;s the day.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;day-5&quot;&gt;Day 5&lt;&#x2F;h1&gt;
+&lt;p&gt;As I mentioned yesterday, I would go to the mountain Fuji today. I slept
+for a while after catching the highway bus. My bus took me to the 5^th^
+station of mountain Fuji.&lt;br &#x2F;&gt;
+I was supposed to stay and tour around the 5^th^ station as my previous
+plan. However, I decided temporarily that I would try to hike for a
+while to reach the 7^th^ station in order to enjoy myself to full. And,
+more importantly, I had not got any professional equipment of hiking
+such as boots or alpenstock. Therefore, I was entitled with &amp;quot;hiking
+without preparedness&amp;quot; in a way by myself later on.&lt;br &#x2F;&gt;
+Then, I went to hiking with a map, a bottle of water and a bag with a
+camera and other stuffs inside.&lt;br &#x2F;&gt;
+This is an overview of the Fuijisan captured from 5^th^ station.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD5-1.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+The trail between the 5^th^ adn 6^th^ station was quite easy to climb
+and &amp;quot;flat&amp;quot; in a way. And this is a pano took from the trail between
+them.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD5-2.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+As you can see from the picture, the altitude of that position at which
+I took the picture was actually the same as the clouds.&lt;br &#x2F;&gt;
+Then I continued to hike on the trail, after the 6^th^ station, I found
+the difference. The trail between the 6^th^ station and the 7^th^
+station was somehow a kind of steep. Furthermore, the land under my
+boots comprised limestone and sandstone, which was very slippery and
+dangerous if you haven&#x27;t got a pair of hiking boots. So my journey was
+actually very thrill.&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;lexuge.github.io&#x2F;beyond-boarder-a-trip-to-tokyo&#x2F;TokyoD5-3.JPG&quot; alt=&quot;&quot; &#x2F;&gt;&lt;br &#x2F;&gt;
+&lt;br &#x2F;&gt;
+In the end, I had done my hiking by climbing to the 7^th^ station.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;day-6&quot;&gt;Day 6&lt;&#x2F;h1&gt;
+&lt;p&gt;On day 6, I got nothing to do but staying at my residential because I
+thought I had no regret about Tokyo and I was at a kind of tiredness.&lt;br &#x2F;&gt;
+In the evening, I checked in a hotel near the airport due to the early
+flight I would take.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;day-7&quot;&gt;Day 7&lt;&#x2F;h1&gt;
+&lt;p&gt;It&#x27;s the final day on which I stayed at Tokyo. Actually, I went to the
+Narita Airport by 5:40 and checked in later. The return journey was
+boring so I won&#x27;t describe it in detail.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;I have got deep impressions about my journey of Tokyo.&lt;br &#x2F;&gt;
+Tokyo, as one of the most prosperous cities of Asia, is very flourishing
+while busying and steaming in order. Everything goes on in a fast pace
+but orderly. The bus, metro, trains, crossing, they all runs on their
+own time.&lt;br &#x2F;&gt;
+In this typical Asian fast-pace metropolitan, I could easily feel the
+tenderness and the nervous scattered in the city air as it was breathed
+and inhaled again and again. This stifling atmosphere leads to the high
+suicide ratio and many different mental illnesses.&lt;br &#x2F;&gt;
+Furthermore, most Asians have introverted personality, Japan has got no
+exception. Also you may find that Japanese are welcome in some aspects,
+but they are not the kind of people which are outgoing and that positive
+or sunshine. This is very different from the American style metropolitan
+-- New York City.&lt;br &#x2F;&gt;
+To sum up, Tokyo is an Asian style metropolitan which is composed of the
+Asian-like personalities and the modern ways of thinking and working,
+which were derived from western.&lt;br &#x2F;&gt;
+This is Japan.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

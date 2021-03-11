@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Abstract Algebra Learning Log - Preliminaries &middot; Think Different</title>
+    <meta name="description" content="Harry Ying&amp;#x27;s blog" />
+    <link rel="shortcut icon"  href="https://lexuge.github.io/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lexuge.github.io/atom.xml">
+
+    <style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}
+</style>
+
+    
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+       
+    
+
+    <meta property="og:site_name" content="Think Different">
+      <meta name="author" content="Harry Ying" />
+      <meta property="og:title" content="Abstract Algebra Learning Log - Preliminaries">
+      <meta property="og:description" content="">
+      <meta property="og:url" content="https://lexuge.github.io/abstract-algebra-learning-log-preliminaries/">
+      <meta property="og:image" content="">
+
+      <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2019-12-10T00:00:00+00:00" />
+
+      <link rel="prev" href="https://lexuge.github.io/beyond-boarder-a-trip-to-tokyo/" />
+      <link rel="next" href="https://lexuge.github.io/review-of-electrostatics-and-electromagnetism/" />
+    
+
+  </head>
+  
+
+  <body>
+    <main id="main" role="main">
+
+      
+      <header role="banner">
+        <h3 style="margin-top:0;">
+          <a href="https://lexuge.github.io" title="Home">Think Different</a>
+          <br /><small>Harry Ying&#x27;s blog</small>
+        </h3>
+      </header>
+      <hr />
+      
+
+      
+<article>
+  <h1>Abstract Algebra Learning Log - Preliminaries</h1>
+
+  
+    <p style="font-size:90%;">Posted on <time datetime="2019-12-10T00:00:00+00:00">December 10, 2019</time></p>
+  
+
+  <blockquote>
+<p>Recently, I have been working on <em>Abstract Algebra</em> which has derived category theory and exposes its strong relation with computer science.</p>
+</blockquote>
+<h1 id="brief-introduction">Brief Introduction</h1>
+<p>All these learning logs will be based on one online and free textbook (2019 Version), naming <a href="http://abstract.ups.edu/"><em>Abstract Algebra</em></a> which is licensed under the GNU FDL.</p>
+<p>This learning log is basically in two parts, one is my own understandings or complementions to some of the parts, another part is my own answers to part of the <em>Exercises</em> section in the end of the chapter. And succeeding learning logs will mainly based on this form too.</p>
+<p>First part may contain works in the textbook itself, therefore, this series of posts is licensed under the GNU FDL either.</p>
+<h1 id="Example">Understandings and complementions to textbook</h1>
+<h2 id="page-6-proof-of-de-mogran-s-laws">Page 6, Proof of De Mogran's Laws</h2>
+<ol>
+<li><script type="math/tex">(A\cup{}B)'=A'\cap{}B'</script>
+</li>
+</ol>
+<p>We define two statements, <script type="math/tex">p</script> and <script type="math/tex">q</script>, representing <script type="math/tex">x\in{}A</script> and <script type="math/tex">x\in{}B</script> respectively.
+statement <script type="math/tex">x\in{}(A\cup{}B)'\Leftrightarrow{}\neg{}(p\lor{}q)\Leftrightarrow{}(\neg{}p\land{}\neg{}q)\Leftrightarrow{}x\in{}(A'\cup{}B')</script>. (The relation between <script type="math/tex">\neg{}(p\lor{}q)</script> and <script type="math/tex">(\neg{}p\land{}\neg{}q)</script> can be deduced by simply enumerating through all the possible values of <script type="math/tex">p</script> and <script type="math/tex">q</script>, e.g. <script type="math/tex">true</script> or <script type="math/tex">false</script> for statements).
+Thus, <script type="math/tex">\forall{}x\in{}(A\cup{}B)'\rArr{}x\in{}(A'\cap{}B')\rArr{}(A\cup{}B)'\supset{}A'\cap{}B'</script>. Conversely, we can prove <script type="math/tex">(A\cup{}B)'\subset{}A'\cap{}B'</script>.
+Therefore, <script type="math/tex">(A\cup{}B)'=A'\cap{}B'</script>. <script type="math/tex">\square{}</script>
+2. <script type="math/tex">(A\cap{}B)'=A'\cup{}B'</script>
+Similarly, we can deduce it by using proposition logic. <script type="math/tex">\square{}</script></p>
+<script type="math/tex">\blacksquare{}</script>
+<h2 id="page-12-proof-of-implications-between-partition-and-relation">Page 12, Proof of implications between partition and relation</h2>
+<h3 id="theorem">Theorem</h3>
+<p>Given an equivalence relation <script type="math/tex">\thicksim{}</script> on a set <script type="math/tex">X</script>, the equivalence classes of <script type="math/tex">X</script> form a partition of <script type="math/tex">X</script>, then there is an equivalence relation on <script type="math/tex">X</script> with equivalence classes <script type="math/tex">X</script>. Conversely, if <script type="math/tex">\mathcal{P}={x_{i}}</script> partition of a set <script type="math/tex">X</script>, then there is an equivalence relation on <script type="math/tex">X</script> with equivalence classes <script type="math/tex">X_{i}</script>.</p>
+<h3 id="proof">Proof</h3>
+<p>By using the reflective property, we have <script type="math/tex">\forall{}x\in{}X, x\thicksim{}x</script>. Thus, <script type="math/tex">x\thicksim{}[x]</script> by the definition of the equivalence class. Therefore, the <script type="math/tex">[x] \not= \empty</script>.</p>
+<p>Thus, <script type="math/tex">\bigcup_{x\in{}X}[x]</script>.</p>
+<p>Now, we should show <script type="math/tex">\forall{}x,y\in{}X</script>, either <script type="math/tex">[x]\cap{}[y]=\empty{}</script> or <script type="math/tex">[x]=[y]</script>.</p>
+<p>Suppose <script type="math/tex">[x]\cap{}[y]\not = \empty</script>, Then, <script type="math/tex">\forall{}c\in{}[y], c\thicksim{}y</script>.</p>
+<script type="math/tex;mode=display">\begin{aligned}
+\because{}&x\thicksim{}y\\
+\therefore{}&y\thicksim{}x\\
+\therefore{}&c\thicksim{}x\\
+\therefore{}&c\in{}[x]\\
+\therefore{}&[y]\subset{}[x]\\
+\end{aligned}</script>
+<p>Conversely, we can also show <script type="math/tex">[x]\subset{}[y]</script> in the same way. Thus, the <script type="math/tex">[x]</script> and <script type="math/tex">[y]</script> are either disjoint or completely the same. <script type="math/tex">\square</script></p>
+<p>Now we need to show that given a partion on <script type="math/tex">X</script>, we can construct a relation <script type="math/tex">\thicksim</script> on <script type="math/tex">X</script> such that partion <script type="math/tex">\mathcal{P}</script> is the equivalence classes of <script type="math/tex">\thicksim{}</script>.</p>
+<p>Suppose we have a relation <script type="math/tex">\thicksim</script>. We define <script type="math/tex">x\thicksim{}y\Leftrightarrow{}x\ and\ y\ are\ in\ the\ same\ part\ x_{i}\ of\ partition\ \mathcal{P}</script>. So we should show that the relation is equivalent.</p>
+<ol>
+<li>
+<p>Reflectivity
+since <script type="math/tex">\forall{}x\in{}X</script>, <script type="math/tex">x</script> will be in the same <script type="math/tex">x_{i}</script> as itself does, so it is trivial to prove.</p>
+</li>
+<li>
+<p>Symmetry</p>
+</li>
+</ol>
+<script type="math/tex">x\thicksim{}y\Leftrightarrow{}x\ and\ y\ are\ in\ the\ same\ part\ x_{i}\ of\ partition\ \mathcal{P}\Leftrightarrow{}y\thicksim{}x</script>, since the order doesn\'t matter.
+<ol start="3">
+<li>Transitivity
+If <script type="math/tex">x\thicksim{}y</script>, then <script type="math/tex">x</script> and <script type="math/tex">y</script> are in the same part. If <script type="math/tex">y\thicksim{}z</script>, than <script type="math/tex">z</script> and <script type="math/tex">y</script> are in the same part. Thus <script type="math/tex">x</script> and <script type="math/tex">z</script> are in the same part, which is <script type="math/tex">x\thicksim{}z</script>.</li>
+</ol>
+<p>Thus relation <script type="math/tex">\thicksim{}</script> is equivalence relation. Since no element can be both in two parts, <script type="math/tex">[x]\cap{}[y]=\empty</script> where <script type="math/tex">x,y\in{}X</script>.</p>
+<p>Now we need to prove the set of equivalence classes is the same as partition <script type="math/tex">\mathcal{P}</script>.</p>
+<p>If there is <script type="math/tex">[x]\not = x_{i}</script> where <script type="math/tex">x\in{}x_{i}</script>, then there must be some <script type="math/tex">y\in{}x_{i}</script> in other equivalence class or <script type="math/tex">y\in{}[x]</script> in other part of <script type="math/tex">\mathcal{P}</script>. Both of which above have contradicted the definition of <script type="math/tex">\thicksim{}</script>. And the <script type="math/tex">\mathcal{P}</script> will be the same as the set of equivalence classes. <script type="math/tex">\square</script></p>
+<script type="math/tex">\blacksquare</script>
+<h1 id="my-answers-to-part-of-exercises-section-1-3">My Answers to part of <em>Exercises</em> section <script type="math/tex">1.3</script>.</h1>
+<p><em>Disclaimer: this part is my own work to the section, thus no guarantees is provided in terms of correctness. You may use it neither as instruction or correct answer</em></p>
+<h2 id="general-solution-to-problems-4-thicksim-16-except-8-and-12">General solution to problems <script type="math/tex">4\thicksim{}16</script> except <script type="math/tex">8</script> and <script type="math/tex">12</script></h2>
+<p>All the proof-based problems involving the equality of operation of set theory (limited to union and intersect only) can be proved by transforming both sides into statements and enumerating through all the possible values of single statements, which construct the left-hand-side or right-hand-side statement, to show that set on each side is a subset of the other. For example, <a href="https://lexuge.github.io/abstract-algebra-learning-log-preliminaries/#Example">Proof of De Morgan's laws</a>.</p>
+<h2 id="problem-12">Problem 12</h2>
+<script type="math/tex;mode=display">\begin{aligned}
+  (A\cup{}B)\times{}C&=\{(a,b):a\in{}(A\cup{}B),\ b\in{}C\}\\
+  &=\{(a,b):a\in{}A\ or\ a\in{}B,\ b\in{}C\}\\
+  &=\{(a,b):a\in{}A,\ b\in{}C\}\cup{}\{(a,b):a\in{}B,\ b\in{}C\}\\
+  &=(A\times{}C)\cup{}(B\times{}C)\\
+\end{aligned}</script>
+<script type="math/tex">\blacksquare</script>
+<h2 id="problem-17">Problem 17</h2>
+<p>In order to let <script type="math/tex">f</script> be a mapping which is well-defined, we need to make sure that <script type="math/tex">f(\frac{kp}{kq})=f(\frac{p}{q})</script> where <script type="math/tex">k\in{}\Z</script> and <script type="math/tex">k\not = 0</script>.</p>
+<ol>
+<li>Only if <script type="math/tex">kp=q</script> implies the above implication. Thus it isn't a mapping</li>
+<li>It is a mapping since it fulfills the requirement above.</li>
+<li>Only if <script type="math/tex">p=q</script> or <script type="math/tex">k=1</script>. Not a mapping.</li>
+<li>It is a mapping.</li>
+</ol>
+<h2 id="problem-22">Problem 22</h2>
+<p><em>(d)</em> We have to show that <script type="math/tex">g(a)=g(b)\rArr{}a=b</script> in order to prove that <script type="math/tex">g</script> is one-to-one. Suppose <script type="math/tex">g(a)=g(b)</script>. Since <script type="math/tex">f</script> is onto, there exists such <script type="math/tex">a</script> and <script type="math/tex">b</script> that <script type="math/tex">a=f(\alpha{})</script> and <script type="math/tex">b=f(\beta{})</script>. So <script type="math/tex">g(a)=g(b)</script> can be written as <script type="math/tex">g(f(\alpha))=g(f(\beta))</script>. Given <script type="math/tex">g\circ{}f</script> is one-to-one, we know that <script type="math/tex">\alpha{}=\beta{}</script>. Thus <script type="math/tex">a=f(\alpha{})=f(\beta{})=b</script>, resulting in <script type="math/tex">g(a)=g(b)\rArr{}a=b</script>.</p>
+<script type="math/tex">\blacksquare{}</script>
+<p><em>(e)</em></p>
+<script type="math/tex;mode=display">\begin{aligned}
+\forall{}&b\in{}B,g(b)\in{}C\\
+\because{}&(g\circ{}f)\ is\ onto\\
+\therefore{}&\exist{}a:g(b)=(g\circ{}f)(a)=g(f(a))\\
+\because{}&g\ is\ one\text{-}to\text{-}one\\
+\therefore{}&\forall{}b\in{}B,b=f(a)
+\end{aligned}</script>
+<script type="math/tex">\blacksquare{}</script>
+<h2 id="problem-28">Problem 28</h2>
+<p>Suppose there is a element <script type="math/tex">z\in{}X</script> such that <script type="math/tex">z</script> is not related to anything. Then transitivity and symmetry hold but reflective holds since we need to have <script type="math/tex">(x,x)\in{}R,\forall{}x\in{}X</script>.</p>
+<script type="math/tex">\blacksquare</script>
+<p>Other parts I find not worth sharing or taking notes.</p>
+<script type="math/tex">24.(b),\ 24.(c),\ 24.(d),\ 24.(e)</script> remain unsolved.
+<h1 id="references">References</h1>
+<p>I would prefer a quick and informal one rather than a formal one.</p>
+<ol>
+<li><a href="http://abstract.ups.edu/"><em>Abstract Algebra</em></a></li>
+<li><a href="https://www.reddit.com/r/cheatatmathhomework/comments/3ymxjp/equivalence_class_question_abstract_algebra/">Equivalence Class Question - Reddit</a></li>
+</ol>
+<h1 id="special-thanks">Special thanks</h1>
+<p>My math teacher.</p>
+
+</article>
+
+
+      
+      <footer role="contentinfo">
+        <hr />
+        
+        <nav style="margin-bottom:1rem;" role="navigation">
+          
+            <a href="https://lexuge.github.io/about">About</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://lexuge.github.io/atom.xml">RSS</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://github.com/LEXUGE">GitHub</a>
+            
+          
+        </nav>
+        
+        
+        <small>
+	  “If you want to live a happy life, tie it to a goal, not to people or things.” - Albert Einstein<br/>
+          Built with <a href="https://www.getzola.org/">Zola</a> by Harry Ying.<br/>
+	  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />
+        </small>
+        
+      </footer>
+      
+
+    </main>
+    
+    
+  </body>
+</html>
+

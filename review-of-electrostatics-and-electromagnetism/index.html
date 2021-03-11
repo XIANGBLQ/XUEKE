@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Review of Electrostatics and Electromagnetism &middot; Think Different</title>
+    <meta name="description" content="Harry Ying&amp;#x27;s blog" />
+    <link rel="shortcut icon"  href="https://lexuge.github.io/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lexuge.github.io/atom.xml">
+
+    <style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}
+</style>
+
+    
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js" integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy" crossorigin="anonymous"></script>
+       
+    
+
+    <meta property="og:site_name" content="Think Different">
+      <meta name="author" content="Harry Ying" />
+      <meta property="og:title" content="Review of Electrostatics and Electromagnetism">
+      <meta property="og:description" content="">
+      <meta property="og:url" content="https://lexuge.github.io/review-of-electrostatics-and-electromagnetism/">
+      <meta property="og:image" content="">
+
+      <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2020-01-25T00:00:00+00:00" />
+
+      <link rel="prev" href="https://lexuge.github.io/abstract-algebra-learning-log-preliminaries/" />
+      <link rel="next" href="https://lexuge.github.io/behind-the-2019-ncov-who-sentenced-country-to-death/" />
+    
+
+  </head>
+  
+
+  <body>
+    <main id="main" role="main">
+
+      
+      <header role="banner">
+        <h3 style="margin-top:0;">
+          <a href="https://lexuge.github.io" title="Home">Think Different</a>
+          <br /><small>Harry Ying&#x27;s blog</small>
+        </h3>
+      </header>
+      <hr />
+      
+
+      
+<article>
+  <h1>Review of Electrostatics and Electromagnetism</h1>
+
+  
+    <p style="font-size:90%;">Posted on <time datetime="2020-01-25T00:00:00+00:00">January 25, 2020</time></p>
+  
+
+  <blockquote>
+<p>It has been a long time since I planned to write this review. This post covers Electrostatics, Circuit, Magnetism and Electromagnetism in my own structure of understanding of all above. And since the post is guided by neither teachers nor guiders, content may <strong>not</strong> be correct.</p>
+</blockquote>
+<h1 id="electrostatics">Electrostatics</h1>
+<h2 id="charges-and-its-related-concepts">Charges and its related concepts.</h2>
+<p>Charge is the bedrock of understanding all the concepts inelectrostatics and even further, because it relates to the electric field and electric potential.</p>
+<h3 id="electric-charge">Electric Charge</h3>
+<p>According to <a href="https://en.wikipedia.org/wiki/Electric_charge">Wikipedia</a>, electric charge is the physical property of matter that causes it to experience a force when placed in an electromagnetic field. The charge can be grouped by either positive or negative. More specifically:</p>
+<ul>
+<li>positive: rubbed glass rod.</li>
+<li>negative: rubbed plastic ruler (amber).</li>
+</ul>
+<p>And the charges have the trait that <strong>unlike charges attract, like charges repel.</strong></p>
+<p>The unit of the amount of the charge is Coulomb, annotated as <script type="math/tex">\text{C}</script>, where <script type="math/tex">\text{C}=\text{A}\times\text{s}</script></p>
+<p>The amount of charges of one proton is notated as <script type="math/tex">e</script>, where <script type="math/tex">e=1.6022\times{}10^{-19}\text{C}</script>.</p>
+<p>The electric charge is quantized, meaning no fraction of <script type="math/tex">e</script> could be gained.</p>
+<h3 id="law-of-conservation-of-electric-charge">Law of Conservation of electric charge</h3>
+<p>This is another version of conservation of energy in the field of electrostatics. It states that:</p>
+<blockquote>
+<p>No <strong>net</strong> electric charge can be created or destroyed.</p>
+</blockquote>
+<p>Remember the thing that it states is about is <strong>net</strong> charge. Thus it doesn't mean that there is no way to get something charged.</p>
+<h3 id="ways-to-get-something-charged">Ways to get something charged</h3>
+<h4 id="induction">Induction</h4>
+<p><em>Induction</em> means to induce the charge while not truly give away the existing ones on one particular object.</p>
+<p>There are two ways of doing so.</p>
+<ul>
+<li>
+<p>Induction by separation
+One positive charged object approaches another neutralized object. Since <strong>unlike charges attract, like charges repel</strong>, the near end of neutralized object would accumulate a group of negative charges, while the positive charges are repelled. If you now cut the original neutralized object in the middle, you can get one positive charged and one negative charged object out of it.</p>
+</li>
+<li>
+<p>Induction by grounding
+Same approach as above, instead of cutting it in the middle, we wire the far end of it to the ground.</p>
+</li>
+</ul>
+<h4 id="conduction">Conduction</h4>
+<p>One charged conductor contacts another uncharged <strong>conductor</strong>. Note that <strong>conductor</strong> in the ideal way implies that electrons can move in it <strong>almost</strong> freely (Resistivity <script type="math/tex">\to{}0^{+}</script>).</p>
+<h2 id="force-and-field-by-charges">Force and field by charges</h2>
+<h3 id="coulomb-s-law">Coulomb's law</h3>
+<script type="math/tex;mode=display">F=k\frac{Q_{1}Q_{2}}{r^{2}}</script>
+<p>where <script type="math/tex">k=\frac{1}{4\pi{}\varepsilon_{0}}</script>. And <script type="math/tex">\varepsilon_{0}=8.85\cdot{}10^{-12}\frac{\text{C}^{2}}{\text{N}\cdot{}\text{m}^{2}}</script> is the permittivity of free space.</p>
+<p><strong>NOTE: For static situation only</strong>. The direction of <script type="math/tex">\vec{F}</script> follows the rule of the attraction and repelement between charges.</p>
+<h3 id="electric-field">Electric field</h3>
+<p>This is a manmade concept which is deduced from the electric force.</p>
+<script type="math/tex;mode=display">\vec{E}=\frac{\vec{F}}{q}</script>
+<script type="math/tex;mode=display">E=k\frac{Q}{r^{2}}</script>
+<p>As long as the <script type="math/tex">q</script> doesn't exert a large force on <script type="math/tex">Q</script> that could move <script type="math/tex">Q</script>, we can calculate <script type="math/tex">\vec{F}=q\vec{E}</script>.</p>
+<h3 id="electric-field-lines-efl">Electric Field Lines (EFL)</h3>
+<p>EFL has these three traits:</p>
+<ol>
+<li>EFL indicates the directions of the electric field.</li>
+<li>number of the EFLs passing through a given area which is normal to EFLs, is proportional to the magnitude of <script type="math/tex">\vec{E}</script>.<a name="rule2"></a></li>
+<li>The number of lines pointing to the nodes is proportional to the magnitude of the electric charge of the node.</li>
+</ol>
+<h3 id="electric-field-and-conductor-static">Electric Field and Conductor (static)</h3>
+<ol>
+<li><script type="math/tex">\sum{}\vec{E}=0</script> inside the conductor.
+</li>
+</ol>
+<p>Refer to the <a href="https://web.mit.edu/sahughes/www/8.022/lec05.pdf">MIT Lecture Notes</a>.</p>
+<ol start="2">
+<li>External <script type="math/tex">\vec{E}</script> is at normal at every point on the surface of the conductor.</li>
+</ol>
+<p>If the tangential component of the external <script type="math/tex">\vec{E}</script> is present at the point(s) of the surface. The charge(s) at these point(s) will flow along the surface in the direction of the <script type="math/tex">\vec{E}</script> (opposite if <script type="math/tex">q</script> is negative), resulting in a <strong>dynamic</strong> situation rather than a <strong>static</strong> one. On the other hand, if only perpendicular component of <script type="math/tex">\vec{E}</script> exists, the force made by <script type="math/tex">\vec{E}</script> can be cancelled out by other forces (like normal force).</p>
+<ol start="3">
+<li>All the charges reside on the surface of the conductor under external <script type="math/tex">\vec{E}</script>. From the Gauss's Law, we can define a Gaussian surface rigorousl inside the conductor (not including surface). For that surface:</li>
+</ol>
+<script type="math/tex;mode=display">\sum{}E_{\perp}\Delta{}A=\frac{Q_{enclosed}}{\varepsilon_{0}}</script>
+<p>since the <script type="math/tex">\sum{}\vec{E}</script> is <script type="math/tex">0</script> inside conductor:</p>
+<script type="math/tex;mode=display">\sum{}E_{\perp}\Delta{}A=0=\frac{Q_{enclosed}}{\varepsilon_{0}}</script>
+<p>Therefore, <script type="math/tex">Q_{enclosed}</script> equals to 0.</p>
+<h2 id="guass-s-law">Guass's Law</h2>
+<h3 id="deduction">Deduction</h3>
+<p>First we define electric flux <script type="math/tex">\Phi_{E}</script> as:</p>
+<script type="math/tex;mode=display">\Phi_{E}=\vec{A}\cdot{}\vec{E}=EA\cos{\theta}=EA_{\perp{}}</script>
+<p>As <a href="https://lexuge.github.io/review-of-electrostatics-and-electromagnetism/#rule2">second rule of EFL</a> stated, <script type="math/tex">E\propto{}\frac{N}{A_{\perp{}}}</script>.</p>
+<p>Thus, <script type="math/tex">EA_{\perp{}}=\Phi_{E}\propto{}N</script>. And since <script type="math/tex">Q_{enclosed}\propto{}N</script>, <script type="math/tex">Q_{enclosed}\propto{}\Phi_{E}</script>. So for a enclosed surface in the space (we choose <script type="math/tex">\frac{1}{\varepsilon_{0}}</script> as the constant of proportionality),</p>
+<script type="math/tex;mode=display">\sum{}E_{\perp}\Delta{}A=\frac{Q_{enclosed}}{\varepsilon_{0}}</script>
+<p>If we choose symmetric Gaussian surface, we could rewrite,</p>
+<script type="math/tex;mode=display">\sum{}E_{\perp}\Delta{}A=E_{\perp}\sum{}\Delta{}A</script>
+<p>since <script type="math/tex">E_{\perp}</script> should remain constant in every angle.</p>
+<h2 id="electric-potential-energy-and-potential">Electric Potential Energy and Potential</h2>
+<p>Suppose there is situation that one charge is being moved from point <script type="math/tex">a</script> to <script type="math/tex">b</script> under uniform<script type="math/tex">\vec{E}</script> (Uniform electric field)</p>
+<script type="math/tex;mode=display">\begin{aligned}
+    \because{}&W_{C}=-\Delta{}\text{PE}=-q(V_{b}-V_{a})=-qV_{ba}=Fd=qEd\\
+	\therefore{}&E=-\frac{V_{ba}}{d}
+\end{aligned}</script>
+<p>where <script type="math/tex">\vec{E}</script> points in the direction of decreasing <script type="math/tex">V_{ba}</script>.</p>
+<p>By using Calculus, we can deduce the electric potential at point in the space due to point charge is: (<script type="math/tex">V</script> approaches 0 as r approaches infinity, plug sign in)</p>
+<script type="math/tex;mode=display">V=k\frac{Q}{r}</script>
+<h2 id="capacitance-and-dielectrics">Capacitance and Dielectrics</h2>
+<h3 id="capacitance">Capacitance</h3>
+<p>Capacitance is a device that can store electric charge, consists of two conductors (plates).
+The charge required by each plate is:</p>
+<script type="math/tex;mode=display">Q=CV</script>
+<p>where <script type="math/tex">V</script> is the potential difference between plates. Here we will deduce the capacitance</p>
+<script type="math/tex">C</script> from the Gauss's Law.
+<p>We choose the surface around the positive charged plate as our Gaussian surface. The Right-hand-side of the Guass's Law, which is <script type="math/tex">\sum{}E_{\perp}\Delta{}A</script> would be <script type="math/tex">E_{\perp}\sum\Delta{}A</script> since the <script type="math/tex">\vec{E}</script> is uniform. Also, we only have one side of the plates to emit the <script type="math/tex">\vec{E}</script>. Thus, after all, the <script type="math/tex">E_{\perp}\sum\Delta{}A=EA\cos{\theta}</script> where the <script type="math/tex">A</script> is the area of one side of the plate. And furthermore, the <script type="math/tex">\vec{E}</script> is perpendicular to the surface area, hence,</p>
+<script type="math/tex;mode=display">E=\frac{Q}{A\varepsilon_{0}}</script>
+<p>We also have,</p>
+<script type="math/tex;mode=display">\tag{V>0}E=\frac{V}{d}</script>
+<p>In all,</p>
+<script type="math/tex;mode=display">\tag{V>0}\begin{aligned}
+    \because{}\frac{V}{d}&=\frac{Q}{A\varepsilon_{0}} \\
+    \therefore{}Q&=\frac{A\varepsilon_{0}}{d}V\\
+    \therefore{}C&=\frac{A\varepsilon_{0}}{d}
+\end{aligned}</script>
+<p>The unit of capacitance <script type="math/tex">C</script> is <script type="math/tex">\text{F}</script>. <script type="math/tex">\text{F}=\frac{\text{C}^{2}}{\text{N}\cdot{}\text{m}}=\frac{\text{A}^{2}\cdot{}\text{s}^{2}}{\text{N}\cdot{}\text{m}}=\frac{\text{A}^{2}\cdot{}\text{s}^{4}}{\text{kg}\cdot{}\text{m}^{2}}</script></p>
+<h3 id="dielectrics">Dielectrics</h3>
+<p>Also there is one kind of materials that has multiple enhancements for capacitance. It's called Dielectrics which is between the conductors (plates). </p>
+<p>Typically, it has three benefits for capacitance:</p>
+<ol>
+<li>Two plates can be applied by high enough voltage without breaking down.</li>
+<li>Conductors can be put close enough without touching each other.</li>
+<li>Amplify capacitance by constant <script type="math/tex">K</script>, which means <script type="math/tex">C=K\varepsilon_{0}\frac{A}{d}</script>.</li>
+</ol>
+<h3 id="energy-stored-in-capacitance">Energy stored in capacitance.</h3>
+<script type="math/tex;mode=display">\text{W}_{\text{NC}}=qV_{ba}=\frac{1}{2}QV=\frac{1}{2}CV=\frac{Q^{2}}{2C}</script>
+<h1 id="electric-circuit">Electric Circuit</h1>
+<p>Here I omit some easy knowledge. So we first start with alternating
+current.</p>
+<h2 id="alternating-current">Alternating Current</h2>
+<p>For an alternating current system,</p>
+<script type="math/tex;mode=display">V=V_{0}\sin{2\pi{}ft}=V_{0}\sin{\omega{}t}</script>
+<p>Therefore,</p>
+<script type="math/tex;mode=display">I=\frac{V}{R}=\frac{V_{0}\sin{\omega{}t}}{R}=I_{0}\sin{\omega{}t}</script>
+<script type="math/tex;mode=display">P=I^{2}R=I^{2}_{0}R\sin^{2}{\omega{}t}</script>
+<p>From the Calculus, we can know that <script type="math/tex">\overline{\sin^{2}{x}}=\frac{1}{2}</script>. Thus,</p>
+<script type="math/tex;mode=display">\overline{P}=\frac{1}{2}I_{0}^{2}R</script>
+<p>Also, the rms (root-mean-square) of both <script type="math/tex">I</script> and <script type="math/tex">V</script> is very important.</p>
+<script type="math/tex;mode=display">I_{rms}=\sqrt{\overline{I^{2}}}=\frac{I}{\sqrt{2}}</script>
+<script type="math/tex;mode=display">V_{rms}=\sqrt{\overline{V^{2}}}=\frac{V}{\sqrt{2}}</script>
+<script type="math/tex;mode=display">\overline{P}=I_{rms}V_{rms}</script>
+<h1 id="magnetism">Magnetism</h1>
+<h2 id="basics-of-magnetic-poles">Basics of magnetic poles</h2>
+<p>Like the charges, there are also two types of poles (north and south). And they follow the rule of <strong>unlike poles attract, like poles repel</strong>. There is <strong>no</strong> single pole magnet until now.</p>
+<h2 id="ampere-s-law">Ampere's law</h2>
+<p>The law states that</p>
+<script type="math/tex;mode=display">\sum{}B_{\|}\Delta{}\ell=\mu{}_{0}I_{enclosed}</script>
+<p>which means &quot;Around a closed path, the sum of the component of the magnetic field tangent to the direction of the path equals <script type="math/tex">\mu{}_{0}</script> times the <strong>net</strong> current intercepted by the area within the path.&quot;</p>
+<h2 id="magnetic-field-current-and-force-because-of-it">Magnetic field, current, and force because of it</h2>
+<p>Like electric field, magnets produce (induce) magnetic filed, which is denoted as <script type="math/tex">\vec{B}</script>. It is a vector and the unit of it is <script type="math/tex">\text{T}</script>, tesla.</p>
+<script type="math/tex;mode=display">\begin{aligned}
+   \text{T}&=\frac{\text{kg}\cdot{}\text{m}\cdot{}\text{s}^{-2}}{\text{C}\cdot{}\text{m}\cdot{}\text{s}}\\
+   &=\frac{\text{kg}}{\text{C}\cdot{}\text{s}}\\
+   &=\frac{\text{kg}}{\text{A}\cdot{}\text{s}^{2}}
+\end{aligned}</script>
+<p>It has been found that the electric current can produce electric field around it. The magnitude of it is deduced as below.</p>
+<script type="math/tex;mode=display">\begin{aligned}
+    \sum{}B_{\|}\Delta{}\ell&=\mu{}_{0}I_{enclosed}\\
+    B\cdot{}2\pi{}r&=I\mu{}_{0}\\
+    B&=\frac{\mu_{0}I}{2\pi{}r}
+\end{aligned}</script>
+<p>The direction of the <script type="math/tex">\vec{B}</script> follows the right hand rule 1 which is &quot;use your right hand to grasp the current in the way that thumb points in the direction of current, the direction of rest of four fingers would be the direction&quot;.</p>
+<p>It has also been found that for the current-carrying wire under <script type="math/tex">\vec{B}</script>, the wire will be subjected to the force exerted by magnetic
+field.</p>
+<script type="math/tex;mode=display">\vec{F}=I\vec{\ell}\times{}\vec{B}</script>
+<p>where <script type="math/tex">\vec{\ell}</script> is a vector whose magnitude is the length of the wire in the field and whose direction is the direction of the wire.</p>
+<p>The direction of the <script type="math/tex">\vec{F}</script> follows the direction rule for the cross product of two vectors.</p>
+<p>The previous expression could also be used to deduce the force on charges under field.</p>
+<script type="math/tex;mode=display">\begin{aligned}
+   I\vec{\ell}\times{}\vec{B}&=\frac{nq}{t}\cdot{}\vec{v}t\times{}\vec{B}\\
+   &=nq\vec{v}\times{}\vec{B}
+\end{aligned}</script>
+<p>In particular, for a single charge (n=1), it can be written in the manner that <script type="math/tex">q\vec{v}\times{}\vec{B}</script>.</p>
+<p>The magnitude of <script type="math/tex">\vec{F}</script> would be <script type="math/tex">nqvB\sin{\theta}</script>. And from here we can get the expression which defines the magnitude of <script type="math/tex">\vec{B}</script>.</p>
+<script type="math/tex;mode=display">B=\frac{F}{nqv\sin{\theta}}</script>
+<h2 id="induced-emf">Induced emf</h2>
+<h3 id="magnetic-flux">Magnetic flux</h3>
+<p>It has been found that the emf could be induced by a changing magnetic field. For quantitative analysis, we define magnetic flux <script type="math/tex">\Phi_{B}</script> similar to electric flux <script type="math/tex">\Phi_{E}</script>. (Direction of area could be chosen from either of the surfaces of the area <script type="math/tex">\vec{A}</script>. It doesn't matter as long as it is consistent.)</p>
+<script type="math/tex;mode=display">\Phi_{B}=\vec{B}\cdot{}\vec{A}</script>
+<h3 id="faraday-s-law">Faraday's law</h3>
+<p>And according to the Faraday's law, at any given time <script type="math/tex">t</script>, the induced emf is equal to the instantaneous rate of change of <strong>magnetic flux through the area inside made by closed circuit</strong>. Here we express magnetic flux inside as a function of <script type="math/tex">t</script>, <script type="math/tex">\Phi_{B}^{inside}=a(t)</script>.</p>
+<script type="math/tex;mode=display">\mathcal{E}=-N\frac{d}{dt}a(t)</script>
+<p>where <script type="math/tex">N</script> is the number of the turn of the circuit.</p>
+<p>Here I have to use the derivative form of the Faraday's law cause it's vital to express it as <em>instantaneous</em> rate of change.</p>
+<h4 id="ac-generator">AC Generator</h4>
+<p>And we can continue to do some work on the equation above if we are analyzing the AC generator. Since the <script type="math/tex">\mathcal{E}</script> is
+changing continuously, we can rewrite <script type="math/tex">\mathcal{E}</script> in the form of a function. Suppose the area <script type="math/tex">\vec{A}</script> that is formed by the circuit, orients the east direction at the beginning. And the <script type="math/tex">\vec{B}</script> is uniform and parallel along the horizontal axis in the space. So at any given time <script type="math/tex">t</script>, the angle that is made by the <script type="math/tex">\vec{A}</script> and <script type="math/tex">\vec{B}</script> is <script type="math/tex">\theta{}=\omega{}t</script>.</p>
+<p>Thus:</p>
+<script type="math/tex;mode=display">\Phi_{B}=a(t)=BA\cos{\omega{}t}</script>
+<p>For the sake of discussion, we set <script type="math/tex">N=1</script>, so the Faraday's law under this scenario would be:</p>
+<script type="math/tex;mode=display">\mathcal{E}=-\frac{d}{dt}a(t)=-\frac{d}{dt}BA\cos{\omega{}t}=\omega{}BA\sin{\omega{}t}</script>
+<p>Or, in terms of <script type="math/tex">\theta</script>:</p>
+<script type="math/tex;mode=display">\mathcal{E}=\omega{}BA\sin{\theta{}}</script>
+<p><img src="https://lexuge.github.io/review-of-electrostatics-and-electromagnetism/ac-generator.png" alt="" /></p>
+<p>Above is the graph of <script type="math/tex">\sin{\theta}</script>. And we can spot out that the sign of <script type="math/tex">\mathcal{E}</script> changes every <script type="math/tex">\pi{}</script>, which means the direction of current in the circuit changes every half revolution. Also, we can see that the current is at its peak when</p>
+<script type="math/tex;mode=display">\theta{}\in{} \{\frac{\pi}{2}k:k=2x+1,x\in{}\Z \}</script>
+<p>And the conclusion above also holds for different situations in which circuit kicks off in different positions.</p>
+<h3 id="the-direction-of-the-current-induced-by-changing-magnetic-field">The direction of the current induced by changing magnetic field.</h3>
+<p><strong>No Lenz's Law needed!</strong> It is possible to determine the direction of emf or current without using Lenz's law. The only thing you need is to use the so-called &quot;Left hand rule of Faraday's law&quot;.</p>
+<p>Point your left hand's thumb in the direction of <script type="math/tex">\vec{A}</script>.</p>
+<p>If the sign of <script type="math/tex">\frac{d}{dt}a(t)</script> is positive (<strong>WITHOUT MINUS SIGN AHEAD!</strong>), then the direction of your rest four fingers is the direction
+of the current.</p>
+<p>If the sign of it is negative, then the direction of the current of the circuit would be in the opposite direction of your rest four fingers.</p>
+
+</article>
+
+
+      
+      <footer role="contentinfo">
+        <hr />
+        
+        <nav style="margin-bottom:1rem;" role="navigation">
+          
+            <a href="https://lexuge.github.io/about">About</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://lexuge.github.io/atom.xml">RSS</a>
+            
+              <span>&middot;</span>
+            
+          
+            <a href="https://github.com/LEXUGE">GitHub</a>
+            
+          
+        </nav>
+        
+        
+        <small>
+	  “If you want to live a happy life, tie it to a goal, not to people or things.” - Albert Einstein<br/>
+          Built with <a href="https://www.getzola.org/">Zola</a> by Harry Ying.<br/>
+	  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />
+        </small>
+        
+      </footer>
+      
+
+    </main>
+    
+    
+  </body>
+</html>
+
